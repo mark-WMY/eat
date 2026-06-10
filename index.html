@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="description" content="食材随机选择器 - 解决今天吃什么的选择困难症">
+  <title>吃什么 - 食材随机选择器</title>
+  <link rel="icon" href="chicken.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <h1>今天吃什么？</h1>
+      <p>从海量食材中随机选择一款美味</p>
+    </header>
+
+    <!-- 筛选区域 -->
+    <section class="filter-section">
+      <!-- 菜系筛选 -->
+      <div class="filter-group">
+        <div class="filter-label">菜系（可多选）</div>
+        <div class="filter-tags" id="filter-cuisine"></div>
+      </div>
+
+      <!-- 用餐时段 -->
+      <div class="filter-group">
+        <div class="filter-label">用餐时段</div>
+        <div class="filter-tags" id="filter-meal-type"></div>
+      </div>
+
+      <!-- 食材类型 -->
+      <div class="filter-group">
+        <div class="filter-label">食材类型（可多选）</div>
+        <div class="filter-tags" id="filter-food-type"></div>
+      </div>
+
+      <!-- 餐品类型 -->
+      <div class="filter-group">
+        <div class="filter-label">餐品类型（可多选）</div>
+        <div class="filter-tags" id="filter-dish-type"></div>
+      </div>
+    </section>
+
+    <!-- 结果区域 -->
+    <section class="result-section" id="result-section">
+      <p class="result-placeholder">点击下方按钮开始选择</p>
+      <div class="result-card" id="result-card" style="display:none;">
+        <p class="result-label">今日推荐</p>
+        <h2 class="result-name" id="result-name"></h2>
+        <div class="result-tags" id="result-tags"></div>
+      </div>
+    </section>
+
+    <!-- 操作按钮 -->
+    <section class="action-section">
+      <button class="btn btn-primary" id="btn-select">开始选择</button>
+      <button class="btn btn-secondary" id="btn-reset">重置条件</button>
+    </section>
+
+    <!-- 统计信息 -->
+    <div class="stats">
+      当前 <strong id="stats-count">0</strong> / 共 <strong id="stats-total">0</strong> 种食材
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,5873 @@
+{
+  "categories": {
+    "cuisine": {
+      "川菜": {
+        "id": "cuisine_chuan",
+        "name": "川菜",
+        "parentId": null
+      },
+      "鲁菜": {
+        "id": "cuisine_lu",
+        "name": "鲁菜",
+        "parentId": null
+      },
+      "粤菜": {
+        "id": "cuisine_yue",
+        "name": "粤菜",
+        "parentId": null
+      },
+      "苏菜": {
+        "id": "cuisine_su",
+        "name": "苏菜",
+        "parentId": null
+      },
+      "浙菜": {
+        "id": "cuisine_zhe",
+        "name": "浙菜",
+        "parentId": null
+      },
+      "闽菜": {
+        "id": "cuisine_min",
+        "name": "闽菜",
+        "parentId": null
+      },
+      "湘菜": {
+        "id": "cuisine_xiang",
+        "name": "湘菜",
+        "parentId": null
+      },
+      "徽菜": {
+        "id": "cuisine_anhui",
+        "name": "徽菜(皖)",
+        "parentId": null
+      },
+      "渝菜": {
+        "id": "cuisine_yu",
+        "name": "渝菜",
+        "parentId": null
+      },
+      "京菜": {
+        "id": "cuisine_beijing",
+        "name": "京菜",
+        "parentId": null
+      },
+      "沪菜": {
+        "id": "cuisine_shanghai",
+        "name": "沪菜",
+        "parentId": null
+      },
+      "东北菜": {
+        "id": "cuisine_dongbei",
+        "name": "东北菜",
+        "parentId": null
+      },
+      "西北菜": {
+        "id": "cuisine_northwest",
+        "name": "西北菜",
+        "parentId": null
+      },
+      "云南菜": {
+        "id": "cuisine_yunnan",
+        "name": "云南菜",
+        "parentId": null
+      },
+      "贵州菜": {
+        "id": "cuisine_guizhou",
+        "name": "贵州菜",
+        "parentId": null
+      },
+      "日式": {
+        "id": "cuisine_japanese",
+        "name": "日式",
+        "parentId": null
+      },
+      "韩式": {
+        "id": "cuisine_korean",
+        "name": "韩式",
+        "parentId": null
+      },
+      "泰式": {
+        "id": "cuisine_thai",
+        "name": "泰式",
+        "parentId": null
+      },
+      "越式": {
+        "id": "cuisine_vietnamese",
+        "name": "越式",
+        "parentId": null
+      },
+      "印度菜": {
+        "id": "cuisine_indian",
+        "name": "印度菜",
+        "parentId": null
+      },
+      "新加坡菜": {
+        "id": "cuisine_singapore",
+        "name": "新加坡菜",
+        "parentId": null
+      },
+      "马来西亚菜": {
+        "id": "cuisine_malaysian",
+        "name": "马来西亚菜",
+        "parentId": null
+      },
+      "意式": {
+        "id": "cuisine_italian",
+        "name": "意式",
+        "parentId": null
+      },
+      "法式": {
+        "id": "cuisine_french",
+        "name": "法式",
+        "parentId": null
+      },
+      "西班牙菜": {
+        "id": "cuisine_spanish",
+        "name": "西班牙菜",
+        "parentId": null
+      },
+      "德式": {
+        "id": "cuisine_german",
+        "name": "德式",
+        "parentId": null
+      },
+      "英式": {
+        "id": "cuisine_british",
+        "name": "英式",
+        "parentId": null
+      },
+      "希腊菜": {
+        "id": "cuisine_greek",
+        "name": "希腊菜",
+        "parentId": null
+      },
+      "美式": {
+        "id": "cuisine_american",
+        "name": "美式",
+        "parentId": null
+      },
+      "墨西哥菜": {
+        "id": "cuisine_mexican",
+        "name": "墨西哥菜",
+        "parentId": null
+      },
+      "巴西菜": {
+        "id": "cuisine_brazilian",
+        "name": "巴西菜",
+        "parentId": null
+      },
+      "西餐": {
+        "id": "cuisine_western",
+        "name": "西餐",
+        "parentId": null
+      },
+      "中东菜": {
+        "id": "cuisine_middle_eastern",
+        "name": "中东菜",
+        "parentId": null
+      },
+      "非洲菜": {
+        "id": "cuisine_african",
+        "name": "非洲菜",
+        "parentId": null
+      },
+      "其他": {
+        "id": "cuisine_other",
+        "name": "其他",
+        "parentId": null
+      }
+    },
+    "mealType": {
+      "早餐": {
+        "id": "meal_breakfast",
+        "name": "早餐"
+      },
+      "午餐": {
+        "id": "meal_lunch",
+        "name": "午餐"
+      },
+      "晚餐": {
+        "id": "meal_dinner",
+        "name": "晚餐"
+      },
+      "夜宵": {
+        "id": "meal_midnight",
+        "name": "夜宵"
+      },
+      "下午茶": {
+        "id": "meal_afternoon_tea",
+        "name": "下午茶"
+      }
+    },
+    "foodType": {
+      "荤菜": {
+        "id": "food_meat",
+        "name": "荤菜"
+      },
+      "素菜": {
+        "id": "food_vegetarian",
+        "name": "素菜"
+      },
+      "海鲜": {
+        "id": "food_seafood",
+        "name": "海鲜"
+      },
+      "禽类": {
+        "id": "food_poultry",
+        "name": "禽类"
+      },
+      "牛肉": {
+        "id": "food_beef",
+        "name": "牛肉"
+      },
+      "猪肉": {
+        "id": "food_pork",
+        "name": "猪肉"
+      },
+      "羊肉": {
+        "id": "food_lamb",
+        "name": "羊肉"
+      },
+      "汤羹": {
+        "id": "food_soup",
+        "name": "汤羹"
+      },
+      "粥品": {
+        "id": "food_congee",
+        "name": "粥品"
+      },
+      "煲仔": {
+        "id": "food_stew",
+        "name": "煲仔"
+      },
+      "饭类": {
+        "id": "food_rice",
+        "name": "饭类"
+      },
+      "面食": {
+        "id": "food_noodles",
+        "name": "面食"
+      },
+      "饺子": {
+        "id": "food_dumpling",
+        "name": "饺子"
+      },
+      "包子": {
+        "id": "food_bun",
+        "name": "包子"
+      },
+      "饼类": {
+        "id": "food_pancake",
+        "name": "饼类"
+      },
+      "烧烤": {
+        "id": "food_bbq",
+        "name": "烧烤"
+      },
+      "火锅": {
+        "id": "food_hotpot",
+        "name": "火锅"
+      },
+      "炒菜": {
+        "id": "food_stirfry",
+        "name": "炒菜"
+      },
+      "凉菜": {
+        "id": "food_cold",
+        "name": "凉菜"
+      },
+      "甜点": {
+        "id": "food_dessert",
+        "name": "甜点"
+      },
+      "饮品": {
+        "id": "food_beverage",
+        "name": "饮品"
+      },
+      "小吃": {
+        "id": "food_snack",
+        "name": "小吃"
+      },
+      "杂粮": {
+        "id": "food_wholegrain",
+        "name": "杂粮"
+      }
+    },
+    "dishType": {
+      "主食": {
+        "id": "dish_staple",
+        "name": "主食"
+      },
+      "正餐": {
+        "id": "dish_main",
+        "name": "正餐"
+      },
+      "小吃": {
+        "id": "dish_snack",
+        "name": "小吃"
+      },
+      "甜点": {
+        "id": "dish_dessert",
+        "name": "甜点"
+      },
+      "饮品": {
+        "id": "dish_beverage",
+        "name": "饮品"
+      },
+      "汤品": {
+        "id": "dish_soup",
+        "name": "汤品"
+      },
+      "前菜": {
+        "id": "dish_appetizer",
+        "name": "前菜"
+      },
+      "沙拉": {
+        "id": "dish_salad",
+        "name": "沙拉"
+      }
+    }
+  },
+  "items": [
+    {
+      "id": "item_00001",
+      "name": "宫保鸡丁",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00002",
+      "name": "鱼香肉丝",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00003",
+      "name": "水煮牛肉",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00004",
+      "name": "麻婆豆腐",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00005",
+      "name": "回锅肉",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00006",
+      "name": "辣子鸡丁",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00007",
+      "name": "夫妻肺片",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_cold",
+        "dish_main",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00008",
+      "name": "口水鸡",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_cold",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00009",
+      "name": "樟茶鸭",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00010",
+      "name": "担担面",
+      "categories": [
+        "cuisine_chuan",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00011",
+      "name": "钟水饺",
+      "categories": [
+        "cuisine_chuan",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_dumpling",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00012",
+      "name": "龙抄手",
+      "categories": [
+        "cuisine_chuan",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_dumpling",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00013",
+      "name": "串串香",
+      "categories": [
+        "cuisine_chuan",
+        "meal_dinner",
+        "meal_midnight",
+        "food_hotpot",
+        "food_meat",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00014",
+      "name": "冒菜",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00015",
+      "name": "毛血旺",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00016",
+      "name": "酸菜鱼",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00017",
+      "name": "泡椒牛蛙",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00018",
+      "name": "干煸四季豆",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00019",
+      "name": "红油抄手",
+      "categories": [
+        "cuisine_chuan",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_dumpling",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00020",
+      "name": "宜宾燃面",
+      "categories": [
+        "cuisine_chuan",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00021",
+      "name": "糖醋鲤鱼",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00022",
+      "name": "九转大肠",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00023",
+      "name": "爆炒腰花",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00024",
+      "name": "葱烧海参",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00025",
+      "name": "德州扒鸡",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00026",
+      "name": "济南把子肉",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00027",
+      "name": "锅塌豆腐",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00028",
+      "name": "奶汤蒲菜",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00029",
+      "name": "油爆双脆",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00030",
+      "name": "清汤燕菜",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00031",
+      "name": "白切鸡",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00032",
+      "name": "烧鹅",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00033",
+      "name": "叉烧",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00034",
+      "name": "蜜汁叉烧",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00035",
+      "name": "豉汁蒸排骨",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00036",
+      "name": "清蒸石斑鱼",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00037",
+      "name": "虾饺",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_seafood",
+        "food_dumpling",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00038",
+      "name": "烧卖",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_meat",
+        "food_dumpling",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00039",
+      "name": "肠粉",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00040",
+      "name": "云吞面",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00041",
+      "name": "煲仔饭",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "food_stew",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00042",
+      "name": "老火靓汤",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00043",
+      "name": "皮蛋瘦肉粥",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "food_congee",
+        "food_pork",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00044",
+      "name": "及第粥",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "food_congee",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00045",
+      "name": "凤爪",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_poultry",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00046",
+      "name": "糯米鸡",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_rice",
+        "food_poultry",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00047",
+      "name": "干炒牛河",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00048",
+      "name": "湿炒牛河",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00049",
+      "name": "咕噜肉",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00050",
+      "name": "蚝油生菜",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00051",
+      "name": "松鼠桂鱼",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00052",
+      "name": "狮子头",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00053",
+      "name": "大煮干丝",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00054",
+      "name": "盐水鸭",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00055",
+      "name": "响油鳝糊",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00056",
+      "name": "无锡排骨",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00057",
+      "name": "叫花鸡",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00058",
+      "name": "阳澄湖大闸蟹",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00059",
+      "name": "扬州炒饭",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00060",
+      "name": "小笼包",
+      "categories": [
+        "cuisine_su",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_bun",
+        "food_pork",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00061",
+      "name": "西湖醋鱼",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00062",
+      "name": "东坡肉",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00063",
+      "name": "龙井虾仁",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00064",
+      "name": "宋嫂鱼羹",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00065",
+      "name": "叫化童鸡",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00066",
+      "name": "干炸响铃",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00067",
+      "name": "宁波汤圆",
+      "categories": [
+        "cuisine_zhe",
+        "meal_breakfast",
+        "meal_dinner",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00068",
+      "name": "嘉兴粽子",
+      "categories": [
+        "cuisine_zhe",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00069",
+      "name": "杭州小笼包",
+      "categories": [
+        "cuisine_zhe",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_bun",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00070",
+      "name": "片儿川",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00071",
+      "name": "佛跳墙",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_seafood",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00072",
+      "name": "荔枝肉",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00073",
+      "name": "醉排骨",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00074",
+      "name": "沙县拌面",
+      "categories": [
+        "cuisine_min",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00075",
+      "name": "沙县扁肉",
+      "categories": [
+        "cuisine_min",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_dumpling",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00076",
+      "name": "蚵仔煎",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00077",
+      "name": "土笋冻",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00078",
+      "name": "面线糊",
+      "categories": [
+        "cuisine_min",
+        "meal_breakfast",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00079",
+      "name": "海蛎饼",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_pancake",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00080",
+      "name": "光饼夹糟肉",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_pancake",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00081",
+      "name": "剁椒鱼头",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00082",
+      "name": "辣椒炒肉",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00083",
+      "name": "永州血鸭",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00084",
+      "name": "东安子鸡",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00085",
+      "name": "腊味合蒸",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00086",
+      "name": "湘西外婆菜",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00087",
+      "name": "长沙臭豆腐",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00088",
+      "name": "口味虾",
+      "categories": [
+        "cuisine_xiang",
+        "meal_dinner",
+        "meal_midnight",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00089",
+      "name": "毛氏红烧肉",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00090",
+      "name": "攸县香干",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00091",
+      "name": "徽州臭鳜鱼",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00092",
+      "name": "徽州毛豆腐",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00093",
+      "name": "黄山炖鸽",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00094",
+      "name": "问政山笋",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00095",
+      "name": "李鸿章杂烩",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00096",
+      "name": "虎皮毛豆腐",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00097",
+      "name": "徽州饼",
+      "categories": [
+        "cuisine_anhui",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00098",
+      "name": "包袱饺",
+      "categories": [
+        "cuisine_anhui",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_dumpling",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00099",
+      "name": "腊八豆腐",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00100",
+      "name": "清蒸鹰龟",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00101",
+      "name": "重庆火锅",
+      "categories": [
+        "cuisine_yu",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_hotpot",
+        "food_meat",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00102",
+      "name": "万州烤鱼",
+      "categories": [
+        "cuisine_other",
+        "meal_dinner",
+        "meal_midnight",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00103",
+      "name": "黔江鸡杂",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00104",
+      "name": "北京烤鸭",
+      "categories": [
+        "cuisine_beijing",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00105",
+      "name": "炸酱面",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00106",
+      "name": "京酱肉丝",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00107",
+      "name": "驴打滚",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00108",
+      "name": "豌豆黄",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00109",
+      "name": "上海小笼包",
+      "categories": [
+        "cuisine_shanghai",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_bun",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00110",
+      "name": "生煎包",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_bun",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00111",
+      "name": "红烧肉",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00112",
+      "name": "本帮熏鱼",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00113",
+      "name": "蟹壳黄",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00114",
+      "name": "锅包肉",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00115",
+      "name": "地三鲜",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00116",
+      "name": "小鸡炖蘑菇",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00117",
+      "name": "猪肉炖粉条",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00118",
+      "name": "东北乱炖",
+      "categories": [
+        "cuisine_dongbei",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_vegetarian",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00119",
+      "name": "溜肉段",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00120",
+      "name": "杀猪菜",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00121",
+      "name": "冷面",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00122",
+      "name": "羊肉泡馍",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_lamb",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00123",
+      "name": "肉夹馍",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pork",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00124",
+      "name": "凉皮",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00125",
+      "name": "biangbiang面",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00126",
+      "name": "手抓羊肉",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_lamb",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00127",
+      "name": "大盘鸡",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00128",
+      "name": "烤羊肉串",
+      "categories": [
+        "cuisine_other",
+        "meal_dinner",
+        "meal_midnight",
+        "food_lamb",
+        "food_bbq",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00129",
+      "name": "酿皮子",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00130",
+      "name": "过桥米线",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00131",
+      "name": "汽锅鸡",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00132",
+      "name": "宣威火腿",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00133",
+      "name": "傣味手抓饭",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00134",
+      "name": "菌菇火锅",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_hotpot",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00135",
+      "name": "破酥粑粑",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00136",
+      "name": "酸汤鱼",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00137",
+      "name": "丝娃娃",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00138",
+      "name": "肠旺面",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00139",
+      "name": "恋爱豆腐果",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00140",
+      "name": "折耳根炒腊肉",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00141",
+      "name": "寿司拼盘",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_rice",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00142",
+      "name": "刺身拼盘",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00143",
+      "name": "天妇罗",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00144",
+      "name": "拉面",
+      "categories": [
+        "cuisine_japanese",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00145",
+      "name": "乌冬面",
+      "categories": [
+        "cuisine_japanese",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00146",
+      "name": "荞麦面",
+      "categories": [
+        "cuisine_japanese",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00147",
+      "name": "丼饭",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00148",
+      "name": "亲子丼",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00149",
+      "name": "牛丼",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00150",
+      "name": "猪排饭",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00151",
+      "name": "照烧鸡",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00152",
+      "name": "寿喜烧",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_hotpot",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00153",
+      "name": "章鱼小丸子",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00154",
+      "name": "大阪烧",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00155",
+      "name": "味噌汤",
+      "categories": [
+        "cuisine_japanese",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00156",
+      "name": "纳豆",
+      "categories": [
+        "cuisine_japanese",
+        "meal_breakfast",
+        "food_vegetarian",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00157",
+      "name": "玉子烧",
+      "categories": [
+        "cuisine_japanese",
+        "meal_breakfast",
+        "food_vegetarian",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00158",
+      "name": "关东煮",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_meat",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00159",
+      "name": "抹茶冰淇淋",
+      "categories": [
+        "cuisine_japanese",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00160",
+      "name": "大福",
+      "categories": [
+        "cuisine_japanese",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00161",
+      "name": "泡菜",
+      "categories": [
+        "cuisine_korean",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00162",
+      "name": "石锅拌饭",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00163",
+      "name": "冷面",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00164",
+      "name": "烤肉",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_pork",
+        "food_bbq",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00165",
+      "name": "炸鸡",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00166",
+      "name": "部队锅",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00167",
+      "name": "大酱汤",
+      "categories": [
+        "cuisine_korean",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00168",
+      "name": "参鸡汤",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00169",
+      "name": "紫菜包饭",
+      "categories": [
+        "cuisine_korean",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00170",
+      "name": "年糕",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00171",
+      "name": "煎饼",
+      "categories": [
+        "cuisine_korean",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00172",
+      "name": "辣炒年糕",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00173",
+      "name": "米酒",
+      "categories": [
+        "cuisine_korean",
+        "meal_dinner",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00174",
+      "name": "韩式豆腐汤",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00175",
+      "name": "烤五花肉",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_bbq",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00176",
+      "name": "冬阴功汤",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00177",
+      "name": "绿咖喱鸡",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00178",
+      "name": "红咖喱牛肉",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00179",
+      "name": "泰式炒河粉",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00180",
+      "name": "芒果糯米饭",
+      "categories": [
+        "cuisine_thai",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "food_rice",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00181",
+      "name": "青木瓜沙拉",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad"
+      ]
+    },
+    {
+      "id": "item_00182",
+      "name": "泰式奶茶",
+      "categories": [
+        "cuisine_thai",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00183",
+      "name": "椰汁西米糕",
+      "categories": [
+        "cuisine_thai",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00184",
+      "name": "泰式春卷",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00185",
+      "name": "菠萝炒饭",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "food_seafood",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00186",
+      "name": "越南河粉",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00187",
+      "name": "越南春卷",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00188",
+      "name": "法棍三明治",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00189",
+      "name": "越南咖啡",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00190",
+      "name": "顺化牛肉粉",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "food_beef",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00191",
+      "name": "西贡虾饼",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00192",
+      "name": "黄油鸡",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00193",
+      "name": "咖喱羊肉",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_lamb",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00194",
+      "name": "玛萨拉 dosa",
+      "categories": [
+        "cuisine_indian",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00195",
+      "name": "烤馕",
+      "categories": [
+        "cuisine_indian",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00196",
+      "name": "印度奶茶",
+      "categories": [
+        "cuisine_indian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00197",
+      "name": "蔬菜咖喱",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00198",
+      "name": "比尔亚尼饭",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00199",
+      "name": "萨莫萨三角饺",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00200",
+      "name": "海南鸡饭",
+      "categories": [
+        "cuisine_singapore",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00201",
+      "name": "叻沙",
+      "categories": [
+        "cuisine_singapore",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "food_seafood",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00202",
+      "name": "肉骨茶",
+      "categories": [
+        "cuisine_singapore",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pork",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00203",
+      "name": "炒粿条",
+      "categories": [
+        "cuisine_singapore",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00204",
+      "name": "satay",
+      "categories": [
+        "cuisine_singapore",
+        "meal_dinner",
+        "meal_midnight",
+        "food_meat",
+        "food_bbq",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00205",
+      "name": "椰浆饭",
+      "categories": [
+        "cuisine_singapore",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00206",
+      "name": "娘惹糕",
+      "categories": [
+        "cuisine_singapore",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00207",
+      "name": "榴莲泡芙",
+      "categories": [
+        "cuisine_singapore",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00208",
+      "name": "玛格丽特披萨",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00209",
+      "name": "意大利面",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00210",
+      "name": "肉酱面",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00211",
+      "name": "奶油培根面",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00212",
+      "name": "千层面",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_pasta",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00213",
+      "name": "提拉米苏",
+      "categories": [
+        "cuisine_italian",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00214",
+      "name": "意式冰淇淋",
+      "categories": [
+        "cuisine_italian",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00215",
+      "name": "卡布奇诺",
+      "categories": [
+        "cuisine_italian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00216",
+      "name": "拿铁咖啡",
+      "categories": [
+        "cuisine_italian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00217",
+      "name": "意式浓缩咖啡",
+      "categories": [
+        "cuisine_italian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00218",
+      "name": "凯撒沙拉",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad"
+      ]
+    },
+    {
+      "id": "item_00219",
+      "name": "帕尔马火腿",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00220",
+      "name": "烩饭",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00221",
+      "name": "番茄罗勒汤",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00222",
+      "name": "可颂面包",
+      "categories": [
+        "cuisine_french",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00223",
+      "name": "法式吐司",
+      "categories": [
+        "cuisine_french",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00224",
+      "name": "洋葱汤",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00225",
+      "name": "蜗牛",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00226",
+      "name": "鹅肝",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00227",
+      "name": "牛排",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00228",
+      "name": "红酒炖牛肉",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00229",
+      "name": "马赛鱼汤",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00230",
+      "name": "马卡龙",
+      "categories": [
+        "cuisine_french",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00231",
+      "name": "焦糖布丁",
+      "categories": [
+        "cuisine_french",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00232",
+      "name": "拿破仑蛋糕",
+      "categories": [
+        "cuisine_french",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00233",
+      "name": "法式咖啡",
+      "categories": [
+        "cuisine_french",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00234",
+      "name": "海鲜饭",
+      "categories": [
+        "cuisine_spanish",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00235",
+      "name": "tapas",
+      "categories": [
+        "cuisine_spanish",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_snack",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00236",
+      "name": "伊比利亚火腿",
+      "categories": [
+        "cuisine_spanish",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00237",
+      "name": "西班牙油条",
+      "categories": [
+        "cuisine_spanish",
+        "meal_breakfast",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00238",
+      "name": "桑格利亚汽酒",
+      "categories": [
+        "cuisine_spanish",
+        "meal_dinner",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00239",
+      "name": "烤猪肘",
+      "categories": [
+        "cuisine_german",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00240",
+      "name": "香肠拼盘",
+      "categories": [
+        "cuisine_german",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00241",
+      "name": "德国啤酒",
+      "categories": [
+        "cuisine_german",
+        "meal_dinner",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00242",
+      "name": "碱水面包",
+      "categories": [
+        "cuisine_german",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00243",
+      "name": "苹果卷",
+      "categories": [
+        "cuisine_german",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00244",
+      "name": "汉堡包",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_beef",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00245",
+      "name": "热狗",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pork",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00246",
+      "name": "炸鸡",
+      "categories": [
+        "cuisine_american",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00247",
+      "name": "肋排",
+      "categories": [
+        "cuisine_american",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_bbq",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00248",
+      "name": "薯条",
+      "categories": [
+        "cuisine_american",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00249",
+      "name": "可乐",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00250",
+      "name": "奶昔",
+      "categories": [
+        "cuisine_american",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00251",
+      "name": "布朗尼",
+      "categories": [
+        "cuisine_american",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00252",
+      "name": "芝士蛋糕",
+      "categories": [
+        "cuisine_american",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00253",
+      "name": "苹果派",
+      "categories": [
+        "cuisine_american",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00254",
+      "name": "pancakes",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00255",
+      "name": "华夫饼",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00256",
+      "name": "培根鸡蛋",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "food_pork",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00257",
+      "name": "牛排",
+      "categories": [
+        "cuisine_american",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00258",
+      "name": "凯撒沙拉",
+      "categories": [
+        "cuisine_american",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad"
+      ]
+    },
+    {
+      "id": "item_00259",
+      "name": "tacos",
+      "categories": [
+        "cuisine_mexican",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00260",
+      "name": "burritos",
+      "categories": [
+        "cuisine_mexican",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00261",
+      "name": "玉米片",
+      "categories": [
+        "cuisine_mexican",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00262",
+      "name": "鳄梨酱",
+      "categories": [
+        "cuisine_mexican",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00263",
+      "name": "墨西哥卷饼",
+      "categories": [
+        "cuisine_mexican",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00264",
+      "name": "三明治",
+      "categories": [
+        "cuisine_western",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00265",
+      "name": "沙拉",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad"
+      ]
+    },
+    {
+      "id": "item_00266",
+      "name": "牛排",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00267",
+      "name": "烤鸡",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00268",
+      "name": "奶油蘑菇汤",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00269",
+      "name": "薯条",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00270",
+      "name": "咖啡",
+      "categories": [
+        "cuisine_western",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00271",
+      "name": "红茶",
+      "categories": [
+        "cuisine_western",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00272",
+      "name": "法拉费",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00273",
+      "name": "胡姆斯",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00274",
+      "name": "沙威玛",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00275",
+      "name": "皮塔饼",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00276",
+      "name": "土耳其咖啡",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00277",
+      "name": "豆浆油条",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_snack",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00278",
+      "name": "豆腐脑",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_vegetarian",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00279",
+      "name": "茶叶蛋",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_poultry",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00280",
+      "name": "包子",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_bun",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00281",
+      "name": "馒头",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_bun",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00282",
+      "name": "花卷",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_bun",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00283",
+      "name": "烧饼",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00284",
+      "name": "煎饼果子",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00285",
+      "name": "小米粥",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_congee",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00286",
+      "name": "八宝粥",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_congee",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00287",
+      "name": "牛奶",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00288",
+      "name": "酸奶",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00289",
+      "name": "果汁",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00290",
+      "name": "麦片",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_wholegrain",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00291",
+      "name": "面包",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00292",
+      "name": "黄油",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00293",
+      "name": "果酱",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00294",
+      "name": "炸鸡柳",
+      "categories": [
+        "cuisine_other",
+        "meal_midnight",
+        "food_poultry",
+        "food_bbq",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00295",
+      "name": "烤串",
+      "categories": [
+        "cuisine_other",
+        "meal_midnight",
+        "food_meat",
+        "food_bbq",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00296",
+      "name": "麻辣烫",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_meat",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00297",
+      "name": "关东煮",
+      "categories": [
+        "cuisine_other",
+        "meal_midnight",
+        "food_meat",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00298",
+      "name": "卤味",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_meat",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00299",
+      "name": "鸭脖",
+      "categories": [
+        "cuisine_other",
+        "meal_midnight",
+        "food_poultry",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00300",
+      "name": "鸡爪",
+      "categories": [
+        "cuisine_other",
+        "meal_midnight",
+        "food_poultry",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00301",
+      "name": "花生毛豆",
+      "categories": [
+        "cuisine_other",
+        "meal_midnight",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00302",
+      "name": "凉拌黄瓜",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_cold",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00303",
+      "name": "拍黄瓜",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_cold",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00304",
+      "name": "奶茶",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00305",
+      "name": "咖啡",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00306",
+      "name": "果汁",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00307",
+      "name": "冰淇淋",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00308",
+      "name": "蛋糕",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00309",
+      "name": "饼干",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00310",
+      "name": "巧克力",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00311",
+      "name": "水果沙拉",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00312",
+      "name": "绿豆汤",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_soup",
+        "dish_soup",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00313",
+      "name": "红豆沙",
+      "categories": [
+        "cuisine_other",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00314",
+      "name": "巴西烤肉",
+      "categories": [
+        "cuisine_brazilian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_bbq",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00315",
+      "name": "费乔达",
+      "categories": [
+        "cuisine_brazilian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00316",
+      "name": "巴西芝士面包球",
+      "categories": [
+        "cuisine_brazilian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00317",
+      "name": "阿萨伊碗",
+      "categories": [
+        "cuisine_brazilian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00318",
+      "name": "莫凯卡鱼汤",
+      "categories": [
+        "cuisine_brazilian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_soup",
+        "dish_main",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00319",
+      "name": "希腊沙拉",
+      "categories": [
+        "cuisine_greek",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad"
+      ]
+    },
+    {
+      "id": "item_00320",
+      "name": "穆萨卡",
+      "categories": [
+        "cuisine_greek",
+        "meal_lunch",
+        "meal_dinner",
+        "food_lamb",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00321",
+      "name": "希腊烤肉串",
+      "categories": [
+        "cuisine_grazilian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_bbq",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00322",
+      "name": "皮塔饼配鹰嘴豆泥",
+      "categories": [
+        "cuisine_greek",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00323",
+      "name": "巴克拉瓦",
+      "categories": [
+        "cuisine_greek",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00324",
+      "name": "炸鱼薯条",
+      "categories": [
+        "cuisine_british",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_snack",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00325",
+      "name": "英式早餐",
+      "categories": [
+        "cuisine_british",
+        "meal_breakfast",
+        "food_meat",
+        "food_poultry",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00326",
+      "name": "牧羊人派",
+      "categories": [
+        "cuisine_british",
+        "meal_lunch",
+        "meal_dinner",
+        "food_lamb",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00327",
+      "name": "约克郡布丁",
+      "categories": [
+        "cuisine_british",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00328",
+      "name": "司康饼",
+      "categories": [
+        "cuisine_british",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00329",
+      "name": "塔吉锅",
+      "categories": [
+        "cuisine_african",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00330",
+      "name": "富富",
+      "categories": [
+        "cuisine_african",
+        "meal_lunch",
+        "meal_dinner",
+        "food_wholegrain",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00331",
+      "name": "贾洛夫饭",
+      "categories": [
+        "cuisine_african",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "food_poultry",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00332",
+      "name": "花生炖菜",
+      "categories": [
+        "cuisine_african",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00333",
+      "name": "萨摩萨",
+      "categories": [
+        "cuisine_african",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00334",
+      "name": "椰浆饭配参巴酱",
+      "categories": [
+        "cuisine_malaysian",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00335",
+      "name": "亚参叻沙",
+      "categories": [
+        "cuisine_malaysian",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "food_seafood",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00336",
+      "name": "仁当牛肉",
+      "categories": [
+        "cuisine_malaysian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00337",
+      "name": "马来炒面",
+      "categories": [
+        "cuisine_malaysian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00338",
+      "name": "煎蕊",
+      "categories": [
+        "cuisine_malaysian",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00339",
+      "name": "辣椒炒鸡蛋",
+      "categories": [
+        "cuisine_chuan",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00340",
+      "name": "家常豆腐",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00341",
+      "name": "鱼香茄子",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00342",
+      "name": "干煸土豆丝",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00343",
+      "name": "虎皮青椒",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00344",
+      "name": "红烧肉",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00345",
+      "name": "红烧排骨",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00346",
+      "name": "红烧茄子",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00347",
+      "name": "糖醋里脊",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00348",
+      "name": "木须肉",
+      "categories": [
+        "cuisine_lu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00349",
+      "name": "白灼菜心",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00350",
+      "name": "清蒸鲈鱼",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00351",
+      "name": "豉油皇大虾",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00352",
+      "name": "滑蛋虾仁",
+      "categories": [
+        "cuisine_yue",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00353",
+      "name": "豉汁蒸凤爪",
+      "categories": [
+        "cuisine_yue",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_poultry",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00354",
+      "name": "松鼠鳜鱼",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00355",
+      "name": "清炖蟹粉狮子头",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00356",
+      "name": "无锡酱排骨",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00357",
+      "name": "苏州熏鱼",
+      "categories": [
+        "cuisine_su",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00358",
+      "name": "桂花糖藕",
+      "categories": [
+        "cuisine_su",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00359",
+      "name": "龙井虾仁",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00360",
+      "name": "东坡肘子",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00361",
+      "name": "西湖莼菜汤",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00362",
+      "name": "宁波烤菜",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00363",
+      "name": "绍兴醉鸡",
+      "categories": [
+        "cuisine_zhe",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00364",
+      "name": "荔枝肉",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00365",
+      "name": "淡糟香螺片",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00366",
+      "name": "鸡汤汆海蚌",
+      "categories": [
+        "cuisine_min",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00367",
+      "name": "莆田卤面",
+      "categories": [
+        "cuisine_min",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00368",
+      "name": "福州鱼丸",
+      "categories": [
+        "cuisine_min",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00369",
+      "name": "小炒黄牛肉",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_beef",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00370",
+      "name": "农家小炒肉",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00371",
+      "name": "酸辣鸡杂",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00372",
+      "name": "擂辣椒皮蛋",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00373",
+      "name": "腊味合蒸",
+      "categories": [
+        "cuisine_xiang",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00374",
+      "name": "徽州臭鳜鱼",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00375",
+      "name": "徽州刀板香",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00376",
+      "name": "绩溪一品锅",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_vegetarian",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00377",
+      "name": "黄山烧饼",
+      "categories": [
+        "cuisine_anhui",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00378",
+      "name": "徽州毛豆腐",
+      "categories": [
+        "cuisine_anhui",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00379",
+      "name": "来凤鱼",
+      "categories": [
+        "cuisine_yu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00380",
+      "name": "璧山兔",
+      "categories": [
+        "cuisine_yu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00381",
+      "name": "太安鱼",
+      "categories": [
+        "cuisine_yu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00382",
+      "name": "邮亭鲫鱼",
+      "categories": [
+        "cuisine_yu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00383",
+      "name": "辣子肥肠",
+      "categories": [
+        "cuisine_yu",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00384",
+      "name": "京酱肉丝",
+      "categories": [
+        "cuisine_beijing",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00385",
+      "name": "老北京爆肚",
+      "categories": [
+        "cuisine_beijing",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00386",
+      "name": "老北京卤煮",
+      "categories": [
+        "cuisine_beijing",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00387",
+      "name": "老北京炒肝",
+      "categories": [
+        "cuisine_beijing",
+        "meal_breakfast",
+        "food_pork",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00388",
+      "name": "艾窝窝",
+      "categories": [
+        "cuisine_beijing",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00389",
+      "name": "上海红烧肉",
+      "categories": [
+        "cuisine_shanghai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00390",
+      "name": "上海熏鱼",
+      "categories": [
+        "cuisine_shanghai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00391",
+      "name": "草头圈子",
+      "categories": [
+        "cuisine_shanghai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00392",
+      "name": "八宝辣酱",
+      "categories": [
+        "cuisine_shanghai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00393",
+      "name": "酒酿圆子",
+      "categories": [
+        "cuisine_shanghai",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00394",
+      "name": "酸菜白肉",
+      "categories": [
+        "cuisine_dongbei",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00395",
+      "name": "拔丝地瓜",
+      "categories": [
+        "cuisine_dongbei",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00396",
+      "name": "雪衣豆沙",
+      "categories": [
+        "cuisine_dongbei",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00397",
+      "name": "芹菜炒粉条",
+      "categories": [
+        "cuisine_dongbei",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00398",
+      "name": "尖椒干豆腐",
+      "categories": [
+        "cuisine_dongbei",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00399",
+      "name": "臊子面",
+      "categories": [
+        "cuisine_northwest",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00400",
+      "name": "油泼面",
+      "categories": [
+        "cuisine_northwest",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00401",
+      "name": "葫芦头泡馍",
+      "categories": [
+        "cuisine_northwest",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "food_meat",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00402",
+      "name": "擀面皮",
+      "categories": [
+        "cuisine_northwest",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00403",
+      "name": "甑糕",
+      "categories": [
+        "cuisine_northwest",
+        "meal_breakfast",
+        "food_wholegrain",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00404",
+      "name": "宜良烤鸭",
+      "categories": [
+        "cuisine_yunnan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00405",
+      "name": "大理砂锅鱼",
+      "categories": [
+        "cuisine_yunnan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00406",
+      "name": "曲靖蒸饵丝",
+      "categories": [
+        "cuisine_yunnan",
+        "meal_breakfast",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00407",
+      "name": "玫瑰红糖凉糕",
+      "categories": [
+        "cuisine_yunnan",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00408",
+      "name": "建水烧豆腐",
+      "categories": [
+        "cuisine_yunnan",
+        "meal_lunch",
+        "meal_dinner",
+        "meal_midnight",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00409",
+      "name": "花溪王记牛肉粉",
+      "categories": [
+        "cuisine_guizhou",
+        "meal_breakfast",
+        "food_noodles",
+        "food_beef",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00410",
+      "name": "青岩猪脚",
+      "categories": [
+        "cuisine_guizhou",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00411",
+      "name": "贞丰糯米饭",
+      "categories": [
+        "cuisine_guizhou",
+        "meal_breakfast",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00412",
+      "name": "安顺裹卷",
+      "categories": [
+        "cuisine_guizhou",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00413",
+      "name": "镇远陈年道菜",
+      "categories": [
+        "cuisine_guizhou",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00414",
+      "name": "三文鱼刺身",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00415",
+      "name": "鳗鱼饭",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00416",
+      "name": "天妇罗丼",
+      "categories": [
+        "cuisine_japanese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00417",
+      "name": "味噌拉面",
+      "categories": [
+        "cuisine_japanese",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00418",
+      "name": "铜锣烧",
+      "categories": [
+        "cuisine_japanese",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00419",
+      "name": "泡菜炒饭",
+      "categories": [
+        "cuisine_korean",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00420",
+      "name": "韩式拌饭",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00421",
+      "name": "韩式煎饼",
+      "categories": [
+        "cuisine_korean",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00422",
+      "name": "韩式豆腐煲",
+      "categories": [
+        "cuisine_korean",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00423",
+      "name": "韩式甜米露",
+      "categories": [
+        "cuisine_korean",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00424",
+      "name": "泰式打抛猪肉饭",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00425",
+      "name": "泰式船面",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00426",
+      "name": "泰式木瓜沙拉",
+      "categories": [
+        "cuisine_thai",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad"
+      ]
+    },
+    {
+      "id": "item_00427",
+      "name": "泰式椰子冰淇淋",
+      "categories": [
+        "cuisine_thai",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00428",
+      "name": "泰式柠檬茶",
+      "categories": [
+        "cuisine_thai",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00429",
+      "name": "越南米粉",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_noodles",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00430",
+      "name": "越南三明治",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00431",
+      "name": "越南春卷",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00432",
+      "name": "越南滴漏咖啡",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00433",
+      "name": "越南甘蔗虾",
+      "categories": [
+        "cuisine_vietnamese",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00434",
+      "name": "印度咖喱角",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00435",
+      "name": "印度烤饼",
+      "categories": [
+        "cuisine_indian",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00436",
+      "name": "印度酸奶",
+      "categories": [
+        "cuisine_indian",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00437",
+      "name": "印度蔬菜咖喱",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00438",
+      "name": "印度酥油鸡",
+      "categories": [
+        "cuisine_indian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00439",
+      "name": "意大利肉丸",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00440",
+      "name": "意式烤面包",
+      "categories": [
+        "cuisine_italian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_pancake",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00441",
+      "name": "意式奶冻",
+      "categories": [
+        "cuisine_italian",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00442",
+      "name": "意式蔬菜汤",
+      "categories": [
+        "cuisine_italian",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00443",
+      "name": "意式咖啡",
+      "categories": [
+        "cuisine_italian",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00444",
+      "name": "法式可丽饼",
+      "categories": [
+        "cuisine_french",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00445",
+      "name": "法式鹅肝酱",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_appetizer"
+      ]
+    },
+    {
+      "id": "item_00446",
+      "name": "法式洋葱汤",
+      "categories": [
+        "cuisine_french",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00447",
+      "name": "法式舒芙蕾",
+      "categories": [
+        "cuisine_french",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00448",
+      "name": "法式香槟",
+      "categories": [
+        "cuisine_french",
+        "meal_dinner",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00449",
+      "name": "西班牙海鲜饭",
+      "categories": [
+        "cuisine_spanish",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "food_rice",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00450",
+      "name": "西班牙土豆蛋饼",
+      "categories": [
+        "cuisine_spanish",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "food_poultry",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00451",
+      "name": "西班牙冷汤",
+      "categories": [
+        "cuisine_spanish",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00452",
+      "name": "西班牙油条巧克力",
+      "categories": [
+        "cuisine_spanish",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_snack",
+        "food_dessert",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00453",
+      "name": "西班牙果酒",
+      "categories": [
+        "cuisine_spanish",
+        "meal_dinner",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00454",
+      "name": "德国烤猪膝",
+      "categories": [
+        "cuisine_german",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00455",
+      "name": "德国香肠拼盘",
+      "categories": [
+        "cuisine_german",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00456",
+      "name": "德国碱水结",
+      "categories": [
+        "cuisine_german",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00457",
+      "name": "德国苹果卷",
+      "categories": [
+        "cuisine_german",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00458",
+      "name": "德国小麦啤酒",
+      "categories": [
+        "cuisine_german",
+        "meal_dinner",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00459",
+      "name": "美式煎饼",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00460",
+      "name": "美式烧烤肋排",
+      "categories": [
+        "cuisine_american",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_bbq",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00461",
+      "name": "美式水牛城鸡翅",
+      "categories": [
+        "cuisine_american",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00462",
+      "name": "美式苹果派",
+      "categories": [
+        "cuisine_american",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00463",
+      "name": "美式冰咖啡",
+      "categories": [
+        "cuisine_american",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00464",
+      "name": "墨西哥玉米饼",
+      "categories": [
+        "cuisine_mexican",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00465",
+      "name": "墨西哥卷饼",
+      "categories": [
+        "cuisine_mexican",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00466",
+      "name": "墨西哥玉米片配 salsa",
+      "categories": [
+        "cuisine_mexican",
+        "meal_lunch",
+        "meal_dinner",
+        "food_snack",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00467",
+      "name": "墨西哥鳄梨酱",
+      "categories": [
+        "cuisine_mexican",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00468",
+      "name": "墨西哥三奶蛋糕",
+      "categories": [
+        "cuisine_mexican",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00469",
+      "name": "中东法拉费",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00470",
+      "name": "中东胡姆斯酱",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_vegetarian",
+        "dish_snack"
+      ]
+    },
+    {
+      "id": "item_00471",
+      "name": "中东沙威玛",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00472",
+      "name": "中东皮塔饼",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00473",
+      "name": "中东土耳其咖啡",
+      "categories": [
+        "cuisine_middle_eastern",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00474",
+      "name": "新加坡辣椒螃蟹",
+      "categories": [
+        "cuisine_singapore",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00475",
+      "name": "新加坡黑胡椒螃蟹",
+      "categories": [
+        "cuisine_singapore",
+        "meal_lunch",
+        "meal_dinner",
+        "food_seafood",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00476",
+      "name": "新加坡咖椰吐司",
+      "categories": [
+        "cuisine_singapore",
+        "meal_breakfast",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00477",
+      "name": "新加坡九层糕",
+      "categories": [
+        "cuisine_singapore",
+        "meal_afternoon_tea",
+        "food_dessert",
+        "dish_dessert"
+      ]
+    },
+    {
+      "id": "item_00478",
+      "name": "新加坡拉茶",
+      "categories": [
+        "cuisine_singapore",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00479",
+      "name": "西式三明治",
+      "categories": [
+        "cuisine_western",
+        "meal_breakfast",
+        "meal_lunch",
+        "food_pancake",
+        "dish_staple"
+      ]
+    },
+    {
+      "id": "item_00480",
+      "name": "西式凯撒沙拉",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_salad",
+        "dish_salad"
+      ]
+    },
+    {
+      "id": "item_00481",
+      "name": "西式奶油蘑菇汤",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_soup",
+        "dish_soup"
+      ]
+    },
+    {
+      "id": "item_00482",
+      "name": "西式烤鸡",
+      "categories": [
+        "cuisine_western",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00483",
+      "name": "西式咖啡",
+      "categories": [
+        "cuisine_western",
+        "meal_breakfast",
+        "meal_afternoon_tea",
+        "food_beverage",
+        "dish_beverage"
+      ]
+    },
+    {
+      "id": "item_00484",
+      "name": "番茄炒蛋",
+      "categories": [
+        "cuisine_other",
+        "meal_breakfast",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00485",
+      "name": "酸辣土豆丝",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00486",
+      "name": "地三鲜",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00487",
+      "name": "可乐鸡翅",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00488",
+      "name": "蒜蓉西兰花",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00489",
+      "name": "麻婆豆腐",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00490",
+      "name": "宫保鸡丁",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_poultry",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00491",
+      "name": "鱼香肉丝",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stirfry",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00492",
+      "name": "糖醋排骨",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00493",
+      "name": "红烧狮子头",
+      "categories": [
+        "cuisine_other",
+        "meal_lunch",
+        "meal_dinner",
+        "food_pork",
+        "food_stew",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00494",
+      "name": "希腊烤肉串",
+      "categories": [
+        "cuisine_greek",
+        "meal_lunch",
+        "meal_dinner",
+        "food_meat",
+        "food_bbq",
+        "dish_main"
+      ]
+    },
+    {
+      "id": "item_00495",
+      "name": "干煸茄子",
+      "categories": [
+        "cuisine_chuan",
+        "meal_lunch",
+        "meal_dinner",
+        "food_vegetarian",
+        "food_stirfry",
+        "dish_main"
+      ]
+    }
+  ]
+}

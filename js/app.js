@@ -22,6 +22,10 @@
   // DOM 元素
   const elements = {};
 
+  // 搜索相关
+  let searchTimeout;
+  let currentSearchKeyword = '';
+
   // 初始化
   async function init() {
     await loadIngredients();
@@ -54,6 +58,12 @@
     elements.resultTags = document.getElementById('result-tags');
     elements.btnSelect = document.getElementById('btn-select');
     elements.btnReset = document.getElementById('btn-reset');
+    elements.btnCatalog = document.getElementById('btn-catalog');
+    elements.searchInput = document.getElementById('search-input');
+    elements.searchClear = document.getElementById('search-clear');
+    elements.catalogModal = document.getElementById('catalog-modal');
+    elements.catalogClose = document.getElementById('catalog-close');
+    elements.catalogList = document.getElementById('catalog-list');
     elements.statsCount = document.getElementById('stats-count');
     elements.statsTotal = document.getElementById('stats-total');
   }
@@ -62,6 +72,38 @@
   function bindEvents() {
     elements.btnSelect.addEventListener('click', handleSelect);
     elements.btnReset.addEventListener('click', handleReset);
+    elements.btnCatalog.addEventListener('click', handleCatalog);
+    elements.catalogClose.addEventListener('click', closeCatalog);
+    elements.catalogModal.addEventListener('click', (e) => {
+      if (e.target === elements.catalogModal) {
+        closeCatalog();
+      }
+    });
+
+    // 搜索功能
+    elements.searchInput.addEventListener('input', (e) => {
+      clearTimeout(searchTimeout);
+      const keyword = e.target.value.trim();
+      
+      // 显示/隐藏清除按钮
+      elements.searchClear.style.display = keyword ? 'flex' : 'none';
+      
+      searchTimeout = setTimeout(() => {
+        currentSearchKeyword = keyword.toLowerCase();
+        updateFilteredItems();
+        updateStats();
+      }, 300);
+    });
+
+    // 清除搜索
+    elements.searchClear.addEventListener('click', () => {
+      elements.searchInput.value = '';
+      elements.searchClear.style.display = 'none';
+      currentSearchKeyword = '';
+      updateFilteredItems();
+      updateStats();
+      elements.searchInput.focus();
+    });
   }
 
   // 渲染筛选器
@@ -151,6 +193,13 @@
     const filters = state.selectedFilters;
 
     state.filteredItems = items.filter(item => {
+      // 搜索过滤
+      if (currentSearchKeyword) {
+        if (!item.name.toLowerCase().includes(currentSearchKeyword)) {
+          return false;
+        }
+      }
+
       // 菜系筛选（多选，任一匹配即可）
       if (filters.cuisine.length > 0) {
         const hasCuisine = filters.cuisine.some(c => item.categories.includes(c));
@@ -186,21 +235,49 @@
       return;
     }
 
-    // 随机选择，避免重复
-    let availableItems = state.filteredItems.filter(
-      item => item.id !== state.lastResult?.id
-    );
+    // 禁用按钮
+    elements.btnSelect.disabled = true;
+    elements.btnSelect.textContent = '选择中...';
 
-    if (availableItems.length === 0) {
-      availableItems = state.filteredItems;
-    }
+    // 滚动动画
+    let count = 0;
+    const maxCount = 20; // 滚动次数
+    const interval = setInterval(() => {
+      const randomItem = state.filteredItems[
+        Math.floor(Math.random() * state.filteredItems.length)
+      ];
+      elements.resultName.textContent = randomItem.name;
+      
+      // 添加滚动动画类
+      elements.resultName.classList.add('rolling');
+      
+      count++;
 
-    const randomIndex = Math.floor(Math.random() * availableItems.length);
-    state.currentResult = availableItems[randomIndex];
-    state.lastResult = state.currentResult;
+      if (count >= maxCount) {
+        clearInterval(interval);
+        elements.resultName.classList.remove('rolling');
+        
+        // 最终选择，避免重复
+        let availableItems = state.filteredItems.filter(
+          item => item.id !== state.lastResult?.id
+        );
 
-    // 渲染结果
-    renderResult();
+        if (availableItems.length === 0) {
+          availableItems = state.filteredItems;
+        }
+
+        const randomIndex = Math.floor(Math.random() * availableItems.length);
+        state.currentResult = availableItems[randomIndex];
+        state.lastResult = state.currentResult;
+
+        // 渲染结果
+        renderResult();
+        
+        // 恢复按钮
+        elements.btnSelect.disabled = false;
+        elements.btnSelect.textContent = '开始选择';
+      }
+    }, 100);
   }
 
   // 渲染结果
@@ -283,11 +360,16 @@
     };
     state.currentResult = null;
     state.lastResult = null;
+    currentSearchKeyword = '';
 
     // 清除所有选中状态
     document.querySelectorAll('.filter-tag').forEach(tag => {
       tag.classList.remove('active');
     });
+
+    // 清除搜索框
+    elements.searchInput.value = '';
+    elements.searchClear.style.display = 'none';
 
     // 重置结果区域
     const placeholder = elements.resultSection.querySelector('.result-placeholder');
@@ -316,6 +398,31 @@
 
     elements.statsCount.textContent = filtered;
     elements.statsTotal.textContent = total;
+  }
+
+  // 食物大全功能
+  function handleCatalog() {
+    if (!state.ingredientsData) return;
+
+    // 按拼音首字母排序
+    const sortedItems = [...state.ingredientsData.items].sort((a, b) => {
+      return a.name.localeCompare(b.name, 'zh-CN');
+    });
+
+    // 渲染列表
+    elements.catalogList.innerHTML = sortedItems.map(item => `
+      <div class="catalog-item" data-name="${item.name}">
+        ${item.name}
+      </div>
+    `).join('');
+
+    // 显示模态框
+    elements.catalogModal.classList.add('show');
+  }
+
+  // 关闭食物大全
+  function closeCatalog() {
+    elements.catalogModal.classList.remove('show');
   }
 
   // 页面加载完成后初始化

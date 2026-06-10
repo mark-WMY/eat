@@ -7,9 +7,6 @@
   <meta name="description" content="食材随机选择器 - 解决今天吃什么的选择困难症">
   <title>吃什么 - 食材随机选择器</title>
   <link rel="icon" href="chicken.ico" type="image/x-icon">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -22,6 +19,12 @@
 
     <!-- 筛选区域 -->
     <section class="filter-section">
+      <!-- 搜索框 -->
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="搜索菜品...">
+        <button id="search-clear" class="search-clear-btn" style="display:none;">×</button>
+      </div>
+
       <!-- 菜系筛选 -->
       <div class="filter-group">
         <div class="filter-label">菜系（可多选）</div>
@@ -61,11 +64,25 @@
     <section class="action-section">
       <button class="btn btn-primary" id="btn-select">开始选择</button>
       <button class="btn btn-secondary" id="btn-reset">重置条件</button>
+      <button class="btn btn-secondary" id="btn-catalog">食物大全</button>
     </section>
 
     <!-- 统计信息 -->
     <div class="stats">
       当前 <strong id="stats-count">0</strong> / 共 <strong id="stats-total">0</strong> 种食材
+    </div>
+  </div>
+
+  <!-- 食物大全模态框 -->
+  <div class="catalog-modal" id="catalog-modal">
+    <div class="catalog-content">
+      <div class="catalog-header">
+        <h2>食物大全</h2>
+        <button class="catalog-close" id="catalog-close">&times;</button>
+      </div>
+      <div class="catalog-body">
+        <div class="catalog-list" id="catalog-list"></div>
+      </div>
     </div>
   </div>
 

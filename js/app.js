@@ -60,6 +60,7 @@
     elements.btnReset = document.getElementById('btn-reset');
     elements.btnCatalog = document.getElementById('btn-catalog');
     elements.searchInput = document.getElementById('search-input');
+    elements.searchBtn = document.getElementById('search-btn');
     elements.searchClear = document.getElementById('search-clear');
     elements.catalogModal = document.getElementById('catalog-modal');
     elements.catalogClose = document.getElementById('catalog-close');
@@ -93,6 +94,20 @@
         updateFilteredItems();
         updateStats();
       }, 300);
+    });
+
+    // 搜索按钮点击
+    if (elements.searchBtn) {
+      elements.searchBtn.addEventListener('click', () => {
+        handleSelect();
+      });
+    }
+
+    // Enter键搜索
+    elements.searchInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        handleSelect();
+      }
     });
 
     // 清除搜索

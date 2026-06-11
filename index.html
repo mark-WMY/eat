@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="description" content="食材随机选择器 - 解决今天吃什么的选择困难症">
-  <title>吃什么 - 食材随机选择器</title>
+  <title>有什么好吃的? - 食物推荐器</title>
   <link rel="icon" href="chicken.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,8 +13,8 @@
   <div class="container">
     <!-- 头部 -->
     <header class="header">
-      <h1>今天吃什么？</h1>
-      <p>从海量食材中随机选择一款美味</p>
+      <h1>有什么好吃的?</h1>
+      <p>智能推荐一款美味佳肴</p>
     </header>
 
     <!-- 筛选区域 -->
@@ -22,8 +22,26 @@
       <!-- 搜索框 -->
       <div class="search-box">
         <input type="text" id="search-input" placeholder="搜索菜品...">
+        <button id="search-btn" class="search-btn">🔍 搜索</button>
         <button id="search-clear" class="search-clear-btn" style="display:none;">×</button>
       </div>
+
+      <!-- 结果区域 - 移至搜索框下方 -->
+      <section class="result-section-inline" id="result-section">
+        <p class="result-placeholder">点击搜索或推荐按钮开始</p>
+        <div class="result-card" id="result-card" style="display:none;">
+          <p class="result-label">本次推荐</p>
+          <h2 class="result-name" id="result-name"></h2>
+          <div class="result-tags" id="result-tags"></div>
+        </div>
+      </section>
+
+      <!-- 操作按钮 - 移至搜索框下方 -->
+      <section class="action-section-inline">
+        <button class="btn btn-primary" id="btn-select">开始推荐</button>
+        <button class="btn btn-secondary" id="btn-reset">重置条件</button>
+        <button class="btn btn-secondary" id="btn-catalog">食物大全</button>
+      </section>
 
       <!-- 菜系筛选 -->
       <div class="filter-group">
@@ -48,23 +66,6 @@
         <div class="filter-label">餐品类型（可多选）</div>
         <div class="filter-tags" id="filter-dish-type"></div>
       </div>
-    </section>
-
-    <!-- 结果区域 -->
-    <section class="result-section" id="result-section">
-      <p class="result-placeholder">点击下方按钮开始选择</p>
-      <div class="result-card" id="result-card" style="display:none;">
-        <p class="result-label">今日推荐</p>
-        <h2 class="result-name" id="result-name"></h2>
-        <div class="result-tags" id="result-tags"></div>
-      </div>
-    </section>
-
-    <!-- 操作按钮 -->
-    <section class="action-section">
-      <button class="btn btn-primary" id="btn-select">开始选择</button>
-      <button class="btn btn-secondary" id="btn-reset">重置条件</button>
-      <button class="btn btn-secondary" id="btn-catalog">食物大全</button>
     </section>
 
     <!-- 统计信息 -->

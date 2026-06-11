@@ -64,10 +64,12 @@ body {
 .search-box {
   position: relative;
   margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
 }
 
 #search-input {
-  width: 100%;
+  flex: 1;
   padding: 12px 40px 12px 16px;
   border: 2px solid var(--border-color);
   border-radius: var(--radius-sm);
@@ -81,9 +83,28 @@ body {
   box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.1);
 }
 
+.search-btn {
+  padding: 12px 20px;
+  background: var(--primary-color);
+  color: #FFF;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.search-btn:hover {
+  background: #E85A2A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
 .search-clear-btn {
   position: absolute;
-  right: 12px;
+  right: 80px;
   top: 50%;
   transform: translateY(-50%);
   background: var(--border-color);
@@ -450,5 +471,57 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* 内联结果区域（搜索框下方） */
+.result-section-inline {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 内联操作按钮区域 */
+.action-section-inline {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.action-section-inline .btn {
+  flex: 1;
+  min-width: 120px;
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+  
+  .search-btn {
+    width: 100%;
+  }
+  
+  .search-clear-btn {
+    right: 12px;
+  }
+  
+  .action-section-inline {
+    flex-direction: column;
+  }
+  
+  .action-section-inline .btn {
+    width: 100%;
   }
 }

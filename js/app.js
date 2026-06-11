@@ -1,41 +1,63 @@
-/**
- * 食材随机选择器 - 主逻辑
- */
-
 (function() {
   'use strict';
 
-  // 状态管理
+  const COMMON_CUISINE_IDS = new Set([
+    'cuisine_chuan', 'cuisine_lu', 'cuisine_yue', 'cuisine_su', 'cuisine_zhe',
+    'cuisine_min', 'cuisine_xiang', 'cuisine_anhui', 'cuisine_yu', 'cuisine_beijing',
+    'cuisine_shanghai', 'cuisine_dongbei', 'cuisine_northwest', 'cuisine_yunnan',
+    'cuisine_guizhou'
+  ]);
+
+  const CUISINE_RENDER_ORDER = [
+    'cuisine_chuan', 'cuisine_lu', 'cuisine_yue', 'cuisine_su', 'cuisine_zhe',
+    'cuisine_min', 'cuisine_xiang', 'cuisine_anhui', 'cuisine_yu', 'cuisine_beijing',
+    'cuisine_shanghai', 'cuisine_dongbei', 'cuisine_northwest', 'cuisine_yunnan',
+    'cuisine_guizhou', 'cuisine_other',
+    'cuisine_japanese', 'cuisine_korean', 'cuisine_thai', 'cuisine_vietnamese',
+    'cuisine_indian', 'cuisine_singapore', 'cuisine_malaysian',
+    'cuisine_italian', 'cuisine_french', 'cuisine_spanish', 'cuisine_german',
+    'cuisine_british', 'cuisine_greek', 'cuisine_american', 'cuisine_mexican',
+    'cuisine_brazilian', 'cuisine_western', 'cuisine_middle_eastern', 'cuisine_african'
+  ];
+
+  const FOREIGN_CUISINE_IDS = new Set([
+    'cuisine_japanese', 'cuisine_korean', 'cuisine_thai', 'cuisine_vietnamese',
+    'cuisine_indian', 'cuisine_singapore', 'cuisine_malaysian',
+    'cuisine_italian', 'cuisine_french', 'cuisine_spanish', 'cuisine_german',
+    'cuisine_british', 'cuisine_greek', 'cuisine_american', 'cuisine_mexican',
+    'cuisine_brazilian', 'cuisine_western', 'cuisine_middle_eastern', 'cuisine_african'
+  ]);
+
   const state = {
     ingredientsData: null,
     selectedFilters: {
       cuisine: [],
       mealType: null,
       foodType: [],
-      dishType: []
+      dishType: [],
+      healthTags: [],
+      allergens: []
     },
+    showAllMode: false,
     currentResult: null,
     lastResult: null,
     filteredItems: []
   };
 
-  // DOM 元素
   const elements = {};
 
-  // 搜索相关
   let searchTimeout;
   let currentSearchKeyword = '';
 
-  // 初始化
   async function init() {
     await loadIngredients();
+    cacheElements();
     bindEvents();
     renderFilters();
     updateFilteredItems();
     updateStats();
   }
 
-  // 加载食材数据
   async function loadIngredients() {
     try {
       const response = await fetch('js/ingredients.json');
@@ -47,12 +69,14 @@
     }
   }
 
-  // 缓存DOM元素
   function cacheElements() {
     elements.filterCuisine = document.getElementById('filter-cuisine');
     elements.filterMealType = document.getElementById('filter-meal-type');
     elements.filterFoodType = document.getElementById('filter-food-type');
     elements.filterDishType = document.getElementById('filter-dish-type');
+    elements.filterHealthTags = document.getElementById('filter-health-tags');
+    elements.filterAllergens = document.getElementById('filter-allergens');
+    elements.toggleCommon = document.getElementById('toggle-common');
     elements.resultSection = document.getElementById('result-section');
     elements.resultName = document.getElementById('result-name');
     elements.resultTags = document.getElementById('result-tags');
@@ -69,7 +93,6 @@
     elements.statsTotal = document.getElementById('stats-total');
   }
 
-  // 绑定事件
   function bindEvents() {
     elements.btnSelect.addEventListener('click', handleSelect);
     elements.btnReset.addEventListener('click', handleReset);
@@ -81,14 +104,12 @@
       }
     });
 
-    // 搜索功能
+    elements.toggleCommon.addEventListener('click', handleToggleCommon);
+
     elements.searchInput.addEventListener('input', (e) => {
       clearTimeout(searchTimeout);
       const keyword = e.target.value.trim();
-      
-      // 显示/隐藏清除按钮
       elements.searchClear.style.display = keyword ? 'flex' : 'none';
-      
       searchTimeout = setTimeout(() => {
         currentSearchKeyword = keyword.toLowerCase();
         updateFilteredItems();
@@ -96,21 +117,18 @@
       }, 300);
     });
 
-    // 搜索按钮点击
     if (elements.searchBtn) {
       elements.searchBtn.addEventListener('click', () => {
         handleSelect();
       });
     }
 
-    // Enter键搜索
     elements.searchInput.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
         handleSelect();
       }
     });
 
-    // 清除搜索
     elements.searchClear.addEventListener('click', () => {
       elements.searchInput.value = '';
       elements.searchClear.style.display = 'none';
@@ -121,45 +139,65 @@
     });
   }
 
-  // 渲染筛选器
+  function handleToggleCommon() {
+    state.showAllMode = !state.showAllMode;
+    elements.toggleCommon.classList.toggle('active');
+    elements.toggleCommon.textContent = state.showAllMode ? '全部' : '常见';
+    updateFilteredItems();
+    updateStats();
+  }
+
   function renderFilters() {
     const data = state.ingredientsData;
     if (!data) return;
 
-    // 渲染菜系筛选（多选）
-    renderFilterGroup(
-      elements.filterCuisine,
-      Object.values(data.categories.cuisine),
-      'cuisine'
-    );
-
-    // 渲染用餐时段（单选）
+    renderCuisineFilter();
+    renderFilterGroup(elements.filterMealType, Object.values(data.categories.mealType), 'mealType', true);
     elements.filterMealType.classList.add('single-select');
-    renderFilterGroup(
-      elements.filterMealType,
-      Object.values(data.categories.mealType),
-      'mealType',
-      true
-    );
-
-    // 渲染食材类型（多选）
-    renderFilterGroup(
-      elements.filterFoodType,
-      Object.values(data.categories.foodType),
-      'foodType'
-    );
-
-    // 渲染餐品类型（多选）
-    if (elements.filterDishType && data.categories.dishType) {
-      renderFilterGroup(
-        elements.filterDishType,
-        Object.values(data.categories.dishType),
-        'dishType'
-      );
-    }
+    renderFilterGroup(elements.filterFoodType, Object.values(data.categories.foodType), 'foodType');
+    renderFilterGroup(elements.filterDishType, Object.values(data.categories.dishType), 'dishType');
+    renderFilterGroup(elements.filterHealthTags, Object.values(data.categories.healthTags), 'healthTags');
+    renderFilterGroup(elements.filterAllergens, Object.values(data.categories.allergens), 'allergens');
   }
 
-  // 渲染单个筛选组
+  function renderCuisineFilter() {
+    const data = state.ingredientsData;
+    if (!data || !data.categories.cuisine) return;
+
+    const container = elements.filterCuisine;
+    const cuisineMap = data.categories.cuisine;
+    const sortedItems = CUISINE_RENDER_ORDER
+      .map(id => Object.values(cuisineMap).find(c => c.id === id))
+      .filter(Boolean);
+
+    const hiddenIds = new Set();
+    sortedItems.forEach((item, index) => {
+      if (FOREIGN_CUISINE_IDS.has(item.id)) {
+        hiddenIds.add(item.id);
+      }
+    });
+
+    container.innerHTML = sortedItems.map(item => `
+      <span class="filter-tag${hiddenIds.has(item.id) ? ' hidden-tag' : ''}" data-id="${item.id}" data-type="cuisine">
+        ${item.name}
+      </span>
+    `).join('') + '<button class="show-all-btn">查看全部</button>';
+
+    container.querySelectorAll('.filter-tag').forEach(tag => {
+      tag.addEventListener('click', () => handleFilterClick(tag, 'cuisine', false));
+    });
+
+    const showAllBtn = container.querySelector('.show-all-btn');
+    const hiddenTags = container.querySelectorAll('.filter-tag.hidden-tag');
+    if (hiddenTags.length === 0) {
+      showAllBtn.style.display = 'none';
+    }
+    showAllBtn.addEventListener('click', () => {
+      hiddenTags.forEach(t => t.classList.add('show'));
+      showAllBtn.style.display = 'none';
+    });
+  }
+
   function renderFilterGroup(container, items, type, singleSelect = false) {
     container.innerHTML = items.map(item => `
       <span class="filter-tag" data-id="${item.id}" data-type="${type}">
@@ -172,13 +210,11 @@
     });
   }
 
-  // 处理筛选点击
   function handleFilterClick(tag, type, singleSelect) {
     const id = tag.dataset.id;
     const container = tag.parentElement;
 
     if (singleSelect) {
-      // 单选模式
       if (tag.classList.contains('active')) {
         tag.classList.remove('active');
         state.selectedFilters[type] = null;
@@ -188,7 +224,6 @@
         state.selectedFilters[type] = id;
       }
     } else {
-      // 多选模式
       tag.classList.toggle('active');
       const index = state.selectedFilters[type].indexOf(id);
       if (index > -1) {
@@ -202,47 +237,55 @@
     updateStats();
   }
 
-  // 更新筛选后的食材列表
   function updateFilteredItems() {
     const items = state.ingredientsData.items;
     const filters = state.selectedFilters;
 
     state.filteredItems = items.filter(item => {
-      // 搜索过滤
       if (currentSearchKeyword) {
         if (!item.name.toLowerCase().includes(currentSearchKeyword)) {
           return false;
         }
       }
 
-      // 菜系筛选（多选，任一匹配即可）
+      if (!state.showAllMode) {
+        const hasCommonCuisine = item.categories.some(c => COMMON_CUISINE_IDS.has(c));
+        if (!hasCommonCuisine) return false;
+      }
+
       if (filters.cuisine.length > 0) {
         const hasCuisine = filters.cuisine.some(c => item.categories.includes(c));
         if (!hasCuisine) return false;
       }
 
-      // 用餐时段筛选（单选）
       if (filters.mealType) {
         if (!item.categories.includes(filters.mealType)) return false;
       }
 
-      // 食材类型筛选（多选，任一匹配即可）
       if (filters.foodType.length > 0) {
         const hasFoodType = filters.foodType.some(f => item.categories.includes(f));
         if (!hasFoodType) return false;
       }
 
-      // 餐品类型筛选（多选，任一匹配即可）
       if (filters.dishType.length > 0) {
         const hasDishType = filters.dishType.some(d => item.categories.includes(d));
         if (!hasDishType) return false;
+      }
+
+      if (filters.healthTags.length > 0) {
+        const hasHealthTag = filters.healthTags.some(h => item.categories.includes(h));
+        if (!hasHealthTag) return false;
+      }
+
+      if (filters.allergens.length > 0) {
+        const hasAllergen = filters.allergens.some(a => item.categories.includes(a));
+        if (hasAllergen) return false;
       }
 
       return true;
     });
   }
 
-  // 处理选择按钮
   function handleSelect() {
     if (state.filteredItems.length === 0) {
       elements.resultName.textContent = '没有符合条件的食材';
@@ -250,29 +293,24 @@
       return;
     }
 
-    // 禁用按钮
     elements.btnSelect.disabled = true;
     elements.btnSelect.textContent = '选择中...';
 
-    // 滚动动画
     let count = 0;
-    const maxCount = 20; // 滚动次数
+    const maxCount = 20;
     const interval = setInterval(() => {
       const randomItem = state.filteredItems[
         Math.floor(Math.random() * state.filteredItems.length)
       ];
       elements.resultName.textContent = randomItem.name;
-      
-      // 添加滚动动画类
       elements.resultName.classList.add('rolling');
-      
+
       count++;
 
       if (count >= maxCount) {
         clearInterval(interval);
         elements.resultName.classList.remove('rolling');
-        
-        // 最终选择，避免重复
+
         let availableItems = state.filteredItems.filter(
           item => item.id !== state.lastResult?.id
         );
@@ -285,22 +323,17 @@
         state.currentResult = availableItems[randomIndex];
         state.lastResult = state.currentResult;
 
-        // 渲染结果
         renderResult();
-        
-        // 恢复按钮
         elements.btnSelect.disabled = false;
-        elements.btnSelect.textContent = '开始选择';
+        elements.btnSelect.textContent = '开始推荐';
       }
     }, 100);
   }
 
-  // 渲染结果
   function renderResult() {
     const item = state.currentResult;
     if (!item) return;
 
-    // 隐藏占位符，显示结果卡片
     const placeholder = elements.resultSection.querySelector('.result-placeholder');
     const resultCard = document.getElementById('result-card');
 
@@ -311,51 +344,26 @@
       resultCard.style.display = 'block';
     }
 
-    // 获取食材名称
     elements.resultName.textContent = item.name;
 
-    // 获取分类标签
     const tagNames = getTagNames(item.categories);
     elements.resultTags.innerHTML = tagNames
       .map(name => `<span class="result-tag">${name}</span>`)
       .join('');
 
-    // 添加动画效果
     elements.resultSection.classList.add('show-result');
   }
 
-  // 获取标签名称
   function getTagNames(categoryIds) {
     const data = state.ingredientsData;
     const names = [];
 
     categoryIds.forEach(id => {
-      // 查找菜系
-      for (const key in data.categories.cuisine) {
-        if (data.categories.cuisine[key].id === id) {
-          names.push(data.categories.cuisine[key].name);
-          break;
-        }
-      }
-      // 查找用餐时段
-      for (const key in data.categories.mealType) {
-        if (data.categories.mealType[key].id === id) {
-          names.push(data.categories.mealType[key].name);
-          break;
-        }
-      }
-      // 查找食材类型
-      for (const key in data.categories.foodType) {
-        if (data.categories.foodType[key].id === id) {
-          names.push(data.categories.foodType[key].name);
-          break;
-        }
-      }
-      // 查找餐品类型
-      if (data.categories.dishType) {
-        for (const key in data.categories.dishType) {
-          if (data.categories.dishType[key].id === id) {
-            names.push(data.categories.dishType[key].name);
+      for (const groupKey in data.categories) {
+        const group = data.categories[groupKey];
+        for (const key in group) {
+          if (group[key].id === id) {
+            names.push(group[key].name);
             break;
           }
         }
@@ -365,28 +373,26 @@
     return names;
   }
 
-  // 处理重置
   function handleReset() {
     state.selectedFilters = {
       cuisine: [],
       mealType: null,
       foodType: [],
-      dishType: []
+      dishType: [],
+      healthTags: [],
+      allergens: []
     };
     state.currentResult = null;
     state.lastResult = null;
     currentSearchKeyword = '';
 
-    // 清除所有选中状态
     document.querySelectorAll('.filter-tag').forEach(tag => {
       tag.classList.remove('active');
     });
 
-    // 清除搜索框
     elements.searchInput.value = '';
     elements.searchClear.style.display = 'none';
 
-    // 重置结果区域
     const placeholder = elements.resultSection.querySelector('.result-placeholder');
     const resultCard = document.getElementById('result-card');
 
@@ -401,46 +407,38 @@
     elements.resultTags.innerHTML = '';
     elements.resultSection.classList.remove('show-result');
 
-    // 更新统计
     updateFilteredItems();
     updateStats();
   }
 
-  // 更新统计信息
   function updateStats() {
     const total = state.ingredientsData?.items?.length || 0;
     const filtered = state.filteredItems.length;
 
     elements.statsCount.textContent = filtered;
-    elements.statsTotal.textContent = total;
+    elements.statsTotal.textContent = `${total} 种食材`;
   }
 
-  // 食物大全功能
   function handleCatalog() {
     if (!state.ingredientsData) return;
 
-    // 按拼音首字母排序
     const sortedItems = [...state.ingredientsData.items].sort((a, b) => {
       return a.name.localeCompare(b.name, 'zh-CN');
     });
 
-    // 渲染列表
     elements.catalogList.innerHTML = sortedItems.map(item => `
       <div class="catalog-item" data-name="${item.name}">
         ${item.name}
       </div>
     `).join('');
 
-    // 显示模态框
     elements.catalogModal.classList.add('show');
   }
 
-  // 关闭食物大全
   function closeCatalog() {
     elements.catalogModal.classList.remove('show');
   }
 
-  // 页面加载完成后初始化
   document.addEventListener('DOMContentLoaded', () => {
     cacheElements();
     init();

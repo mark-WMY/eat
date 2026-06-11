@@ -21,9 +21,12 @@
     <section class="filter-section">
       <!-- 搜索框 -->
       <div class="search-box">
-        <input type="text" id="search-input" placeholder="搜索菜品...">
+        <div class="search-input-wrapper">
+          <input type="text" id="search-input" placeholder="搜索菜品...">
+          <button id="search-clear" class="search-clear-btn" style="display:none;">×</button>
+        </div>
         <button id="search-btn" class="search-btn">🔍 搜索</button>
-        <button id="search-clear" class="search-clear-btn" style="display:none;">×</button>
+        <button id="toggle-common" class="common-toggle-btn active" title="切换常见/全部模式">常见</button>
       </div>
 
       <!-- 结果区域 - 移至搜索框下方 -->
@@ -65,6 +68,18 @@
       <div class="filter-group">
         <div class="filter-label">餐品类型（可多选）</div>
         <div class="filter-tags" id="filter-dish-type"></div>
+      </div>
+
+      <!-- 健康标签 -->
+      <div class="filter-group">
+        <div class="filter-label">健康标签（可多选）</div>
+        <div class="filter-tags" id="filter-health-tags"></div>
+      </div>
+
+      <!-- 常见过敏原 -->
+      <div class="filter-group">
+        <div class="filter-label">不包含以下食材(可多选)</div>
+        <div class="filter-tags" id="filter-allergens"></div>
       </div>
     </section>
 

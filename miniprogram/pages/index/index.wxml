@@ -1,13 +1,21 @@
 <view class="container">
-  <!-- 头部 -->
   <header class="header">
     <text class="header-title">今天吃什么？</text>
     <text class="header-desc">从海量食材中随机选择一款美味</text>
   </header>
 
-  <!-- 筛选区域 -->
   <section class="filter-section">
-    <!-- 菜系筛选 -->
+    <!-- 切换模式按钮 -->
+    <view class="toggle-row">
+      <view
+        class="toggle-btn {{!showAllMode ? 'active' : ''}}"
+        bindtap="onToggleCommon"
+      >
+        {{showAllMode ? '全部模式' : '常见模式'}}
+      </view>
+      <text class="toggle-hint">{{showAllMode ? '显示所有菜品' : '仅显示常见菜品'}}</text>
+    </view>
+
     <view class="filter-group">
       <text class="filter-label">菜系（可多选）</text>
       <view class="filter-tags" id="filter-cuisine">
@@ -22,7 +30,6 @@
       </view>
     </view>
 
-    <!-- 用餐时段 -->
     <view class="filter-group">
       <text class="filter-label">用餐时段</text>
       <view class="filter-tags single-select" id="filter-meal-type">
@@ -37,7 +44,6 @@
       </view>
     </view>
 
-    <!-- 食材类型 -->
     <view class="filter-group">
       <text class="filter-label">食材类型（可多选）</text>
       <view class="filter-tags" id="filter-food-type">
@@ -52,7 +58,6 @@
       </view>
     </view>
 
-    <!-- 餐品类型 -->
     <view class="filter-group" wx:if="{{dishTypeList.length > 0}}">
       <text class="filter-label">餐品类型（可多选）</text>
       <view class="filter-tags" id="filter-dish-type">
@@ -66,9 +71,36 @@
         </block>
       </view>
     </view>
+
+    <view class="filter-group" wx:if="{{healthTagsList.length > 0}}">
+      <text class="filter-label">健康标签（可多选）</text>
+      <view class="filter-tags" id="filter-health-tags">
+        <block wx:for="{{healthTagsList}}" wx:key="id">
+          <text
+            class="filter-tag {{item.selected ? 'active' : ''}}"
+            data-id="{{item.id}}"
+            data-type="healthTags"
+            bindtap="onFilterTap"
+          >{{item.name}}</text>
+        </block>
+      </view>
+    </view>
+
+    <view class="filter-group" wx:if="{{allergensList.length > 0}}">
+      <text class="filter-label">不包含以下食材(可多选)</text>
+      <view class="filter-tags" id="filter-allergens">
+        <block wx:for="{{allergensList}}" wx:key="id">
+          <text
+            class="filter-tag {{item.selected ? 'active' : ''}}"
+            data-id="{{item.id}}"
+            data-type="allergens"
+            bindtap="onFilterTap"
+          >{{item.name}}</text>
+        </block>
+      </view>
+    </view>
   </section>
 
-  <!-- 结果区域 -->
   <section class="result-section">
     <block wx:if="{{!currentResult}}">
       <text class="result-placeholder">点击下方按钮开始选择</text>
@@ -86,13 +118,11 @@
     </block>
   </section>
 
-  <!-- 操作按钮 -->
   <view class="action-section">
     <button class="btn btn-primary" bindtap="onSelect">开始选择</button>
     <button class="btn btn-secondary" bindtap="onReset">重置条件</button>
   </view>
 
-  <!-- 统计信息 -->
   <view class="stats">
     当前 <text class="strong">{{filteredCount}}</text> / 共 <text class="strong">{{totalCount}}</text> 种食材
   </view>

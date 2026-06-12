@@ -439,8 +439,21 @@ body {
   padding: 0 4px;
 }
 
-.more-rec-header .result-label {
-  margin-bottom: 0;
+.more-rec-back {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.more-rec-back:hover {
+  background: var(--primary-color);
+  color: #FFF;
+  border-color: var(--primary-color);
 }
 
 .more-rec-actions {
@@ -514,7 +527,22 @@ body {
 }
 
 .more-rec-item.expanded {
-  grid-column: 1 / -1;
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-rec-item.expanded .more-rec-name {
+  font-size: 1.3rem;
+}
+
+/* Expanded layout: left 3/4, right 1/4 stacked */
+.more-rec-grid.has-expanded {
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
 
 /* Blur overlay */
@@ -774,64 +802,13 @@ body {
   .action-section-inline .btn { width: 100%; }
 }
 
-/* ===== 桌面端: 右侧 peek 效果 ===== */
+/* ===== 桌面端 ===== */
 @media (min-width: 601px) {
   .result-section-inline {
     overflow: hidden;
-    padding-right: 0;
   }
 
-  .result-slider:not(.show-more) {
-    transform: translateX(-28%);
-  }
-
-  .result-slider:not(.show-more) #result-slide-more .more-rec-grid {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-
-  .result-slider:not(.show-more) #result-slide-more .more-rec-item {
-    padding: 8px;
-  }
-
-  .result-slider:not(.show-more) #result-slide-more .more-rec-item .more-rec-name {
-    font-size: 0.82rem;
-  }
-
-  .result-slider:not(.show-more) #result-slide-more .more-rec-header .result-label {
-    font-size: 0.78rem;
-  }
-
-  .result-slider:not(.show-more) #result-slide-more .more-rec-actions {
-    gap: 4px;
-  }
-
-  .result-slider:not(.show-more) #result-slide-more .more-rec-refresh,
-  .result-slider:not(.show-more) #result-slide-more .more-rec-close {
-    padding: 3px 7px;
-    font-size: 0.72rem;
-  }
-
-  /* Blur overlay on desktop peek */
-  .result-blur-overlay {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: calc(28% * 0.65);
-    height: 100%;
-    background: linear-gradient(to right, transparent 0%, var(--card-bg) 100%);
-    pointer-events: none;
-    z-index: 2;
-    transition: opacity 0.4s ease;
-  }
-
-  .result-slider.show-more ~ .result-blur-overlay {
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  /* Show-more: show full more-recs panel */
+  /* Show-more: slide to show more-recs panel */
   .result-slider.show-more {
     transform: translateX(-100%);
   }

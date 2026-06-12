@@ -117,7 +117,7 @@
     elements.statsTotal = document.getElementById('stats-total');
     elements.moreRecBtn = document.getElementById('more-rec-btn');
     elements.moreRecRefresh = document.getElementById('more-rec-refresh');
-    elements.moreRecClose = document.getElementById('more-rec-close');
+    elements.moreRecBack = document.getElementById('more-rec-back');
     elements.moreRecPanel = document.getElementById('more-rec-panel');
     elements.moreRecGrid = document.getElementById('more-rec-grid');
     elements.resultSlider = document.getElementById('result-slider');
@@ -215,13 +215,18 @@
     // 更多推荐按钮
     elements.moreRecBtn.addEventListener('click', showMoreRecs);
     elements.moreRecRefresh.addEventListener('click', refreshMoreRecs);
-    elements.moreRecClose.addEventListener('click', closeMoreRecs);
+    elements.moreRecBack.addEventListener('click', closeMoreRecs);
 
-    // More-rec item click to expand
+    // More-rec item click - expand/collapse with 1:3 layout
     elements.moreRecGrid.addEventListener('click', (e) => {
       const item = e.target.closest('.more-rec-item');
-      if (item) {
-        item.classList.toggle('expanded');
+      if (!item) return;
+      const wasExpanded = item.classList.contains('expanded');
+      elements.moreRecGrid.querySelectorAll('.more-rec-item').forEach(el => el.classList.remove('expanded'));
+      elements.moreRecGrid.classList.remove('has-expanded');
+      if (!wasExpanded) {
+        item.classList.add('expanded');
+        elements.moreRecGrid.classList.add('has-expanded');
       }
     });
   }
@@ -912,19 +917,23 @@
     let isDragging = false;
 
     slider.addEventListener('touchstart', (e) => {
-      if (elements.moreRecPanel.style.display === 'none') return;
       startX = e.touches[0].clientX;
       isDragging = true;
     }, { passive: true });
+
+    slider.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+    }, { passive: false });
 
     slider.addEventListener('touchend', (e) => {
       if (!isDragging) return;
       isDragging = false;
       const diff = e.changedTouches[0].clientX - startX;
-      if (Math.abs(diff) > 50) {
+      if (Math.abs(diff) > 40) {
         if (diff > 0 && elements.resultSlider.classList.contains('show-more')) {
           closeMoreRecs();
-        } else if (diff < 0 && !elements.resultSlider.classList.contains('show-more')) {
+        } else if (diff < 0 && !elements.resultSlider.classList.contains('show-more') && state.currentResult) {
           showMoreRecs();
         }
       }
@@ -932,7 +941,6 @@
 
     // Mouse drag for desktop
     slider.addEventListener('mousedown', (e) => {
-      if (elements.moreRecPanel.style.display === 'none') return;
       startX = e.clientX;
       isDragging = true;
     });
@@ -945,10 +953,10 @@
       if (!isDragging) return;
       isDragging = false;
       const diff = e.clientX - startX;
-      if (Math.abs(diff) > 50) {
+      if (Math.abs(diff) > 40) {
         if (diff > 0 && elements.resultSlider.classList.contains('show-more')) {
           closeMoreRecs();
-        } else if (diff < 0 && !elements.resultSlider.classList.contains('show-more')) {
+        } else if (diff < 0 && !elements.resultSlider.classList.contains('show-more') && state.currentResult) {
           showMoreRecs();
         }
       }

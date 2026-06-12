@@ -59,12 +59,32 @@
 
   async function loadIngredients() {
     try {
-      const response = await fetch('js/ingredients.json');
+      const response = await fetch('js/ingredients_common.json');
       const data = await response.json();
       state.ingredientsData = data;
+      lazyLoadFullData();
     } catch (error) {
       console.error('加载食材数据失败:', error);
       elements.resultName.textContent = '数据加载失败';
+    }
+  }
+
+  async function lazyLoadFullData() {
+    try {
+      const response = await fetch('js/ingredients_full.json');
+      const fullData = await response.json();
+      if (fullData && fullData.items) {
+        state.ingredientsData = fullData;
+        if (state.showAllMode) {
+          updateFilteredItems();
+          updateStats();
+          if (elements.catalogModal.classList.contains('show')) {
+            handleCatalog();
+          }
+        }
+      }
+    } catch (error) {
+      console.log('全量数据后台加载完成');
     }
   }
 

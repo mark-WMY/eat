@@ -27,7 +27,9 @@ eatWhat/
 │
 ├── js/
 │   ├── app.js                          # 主应用逻辑
-│   └── ingredients.json                # 食物数据（1046条）
+│   ├── ingredients_common.json          # 常见菜品数据（2254条，首屏加载）
+│   ├── ingredients_full.json            # 全量菜品数据（3339条，后台懒加载）
+│   └── ingredients.json                # 食物数据（完整原始文件）
 │
 ├── img/
 │   ├── bg.jpg                          # 背景图片
@@ -36,9 +38,6 @@ eatWhat/
 │
 ├── scripts/
 │   └── ingredient_tools.py             # 数据管理工具
-│
-├── _redirects                          # Cloudflare路由配置
-└── wrangler.toml                       # Cloudflare项目配置
 ```
 
 ## 🚀 快速开始
@@ -50,7 +49,7 @@ eatWhat/
 
 ## 📊 数据说明
 
-项目包含丰富的食物数据（`ingredients.json`），涵盖1046条国内外常见菜品：
+项目包含丰富的食物数据（`ingredients.json`），涵盖3339条国内外常见菜品：
 - **八大菜系**：川菜、粤菜、鲁菜、苏菜、浙菜、闽菜、湘菜、徽菜等
 - **国际美食**：日料、韩料、西餐、东南亚菜等
 - **用餐时段**：早餐、午餐、晚餐、夜宵、下午茶

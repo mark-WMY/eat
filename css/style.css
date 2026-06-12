@@ -134,29 +134,64 @@ body {
   color: #FFF;
 }
 
-/* 常见/全部切换按钮 */
-.common-toggle-btn {
-  padding: 12px 16px;
-  background: var(--bg-color);
-  color: var(--accent-color);
-  border: 2px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  font-size: 0.85rem;
-  font-weight: 600;
+/* 常见/全部切换开关 */
+.common-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   cursor: pointer;
-  transition: all 0.25s ease;
-  white-space: nowrap;
+  user-select: none;
+  padding: 8px 12px;
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--bg-color);
+  transition: border-color 0.25s;
 }
 
-.common-toggle-btn:hover {
+.common-toggle:hover {
   border-color: var(--primary-color);
+}
+
+.common-toggle .toggle-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-light);
+  transition: color 0.2s;
+}
+
+.common-toggle.active .toggle-label[data-mode="common"],
+.common-toggle:not(.active) .toggle-label[data-mode="all"] {
   color: var(--primary-color);
 }
 
-.common-toggle-btn.active {
+.toggle-switch {
+  width: 36px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 10px;
+  position: relative;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.common-toggle.active .toggle-switch {
   background: var(--primary-color);
-  border-color: var(--primary-color);
-  color: #FFF;
+}
+
+.toggle-knob {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: left 0.2s;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.common-toggle.active .toggle-knob {
+  left: 18px;
 }
 
 /* 隐藏的筛选标签 */
@@ -541,10 +576,19 @@ body {
   margin-bottom: 20px;
   box-shadow: var(--shadow);
   text-align: center;
-  min-height: 150px;
+  min-height: 240px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+#result-tags {
+  min-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
   align-items: center;
 }
 
@@ -565,21 +609,36 @@ body {
 /* 响应式调整 */
 @media (max-width: 600px) {
   .search-box {
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
   }
-  
+
+  .search-input-wrapper {
+    flex: 0 0 100%;
+    order: 1;
+  }
+
   .search-btn {
-    width: 100%;
+    flex: 1;
+    min-width: 0;
+    order: 2;
+    padding: 10px 12px;
+    font-size: 0.85rem;
   }
-  
+
+  .common-toggle {
+    order: 3;
+    padding: 6px 10px;
+  }
+
   .search-clear-btn {
     /* 在 .search-input-wrapper 内定位，无需额外 right */
   }
-  
+
   .action-section-inline {
     flex-direction: column;
   }
-  
+
   .action-section-inline .btn {
     width: 100%;
   }

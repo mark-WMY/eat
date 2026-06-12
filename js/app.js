@@ -142,7 +142,6 @@
   function handleToggleCommon() {
     state.showAllMode = !state.showAllMode;
     elements.toggleCommon.classList.toggle('active');
-    elements.toggleCommon.textContent = state.showAllMode ? '全部' : '常见';
     updateFilteredItems();
     updateStats();
   }
@@ -293,6 +292,13 @@
       return;
     }
 
+    // Show result card immediately so rolling animation is visible on first click
+    const placeholder = elements.resultSection.querySelector('.result-placeholder');
+    const resultCard = document.getElementById('result-card');
+    if (placeholder) placeholder.style.display = 'none';
+    if (resultCard) resultCard.style.display = 'block';
+    elements.resultSection.classList.add('show-result');
+
     elements.btnSelect.disabled = true;
     elements.btnSelect.textContent = '选择中...';
 
@@ -304,6 +310,12 @@
       ];
       elements.resultName.textContent = randomItem.name;
       elements.resultName.classList.add('rolling');
+
+      // Update tags during rolling too
+      const tagNames = getTagNames(randomItem.categories);
+      elements.resultTags.innerHTML = tagNames
+        .map(name => `<span class="result-tag">${name}</span>`)
+        .join('');
 
       count++;
 

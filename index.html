@@ -26,7 +26,11 @@
           <button id="search-clear" class="search-clear-btn" style="display:none;">×</button>
         </div>
         <button id="search-btn" class="search-btn">🔍 搜索</button>
-        <button id="toggle-common" class="common-toggle-btn active" title="切换常见/全部模式">常见</button>
+        <div class="common-toggle active" id="toggle-common" title="切换常见/全部模式">
+          <span class="toggle-label" data-mode="all">全部</span>
+          <div class="toggle-switch"><div class="toggle-knob"></div></div>
+          <span class="toggle-label" data-mode="common">常见</span>
+        </div>
       </div>
 
       <!-- 结果区域 - 移至搜索框下方 -->

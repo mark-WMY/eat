@@ -44,6 +44,7 @@
 
   let searchTimeout;
   let currentSearchKeyword = '';
+  let moreRecsItems = [];
 
   async function init() {
     await loadIngredients();
@@ -114,6 +115,13 @@
     elements.catalogList = document.getElementById('catalog-list');
     elements.statsCount = document.getElementById('stats-count');
     elements.statsTotal = document.getElementById('stats-total');
+    elements.moreRecBtn = document.getElementById('more-rec-btn');
+    elements.moreRecRefresh = document.getElementById('more-rec-refresh');
+    elements.moreRecClose = document.getElementById('more-rec-close');
+    elements.moreRecPanel = document.getElementById('more-rec-panel');
+    elements.moreRecGrid = document.getElementById('more-rec-grid');
+    elements.resultSlider = document.getElementById('result-slider');
+    elements.resultBlurOverlay = document.getElementById('result-blur-overlay');
   }
 
   function bindEvents() {
@@ -202,6 +210,19 @@
     elements.tooltipClose.addEventListener('click', (e) => {
       e.stopPropagation();
       hideAllergenTooltip();
+    });
+
+    // 更多推荐按钮
+    elements.moreRecBtn.addEventListener('click', showMoreRecs);
+    elements.moreRecRefresh.addEventListener('click', refreshMoreRecs);
+    elements.moreRecClose.addEventListener('click', closeMoreRecs);
+
+    // More-rec item click to expand
+    elements.moreRecGrid.addEventListener('click', (e) => {
+      const item = e.target.closest('.more-rec-item');
+      if (item) {
+        item.classList.toggle('expanded');
+      }
     });
   }
 
@@ -423,6 +444,33 @@
     });
   }
 
+  function getRelatedScore(item, reference) {
+    if (!reference) return 1;
+    const refCats = new Set(reference.categories || []);
+    const itemCats = new Set(item.categories || []);
+    let score = 0;
+    for (const c of itemCats) {
+      if (refCats.has(c)) score++;
+    }
+    return score;
+  }
+
+  function pickRelatedItem(candidates, reference) {
+    if (candidates.length === 0) return null;
+    if (candidates.length === 1 || !reference) {
+      return candidates[Math.floor(Math.random() * candidates.length)];
+    }
+    const scores = candidates.map(item => ({
+      item,
+      score: getRelatedScore(item, reference),
+    }));
+    const maxScore = Math.max(...scores.map(s => s.score));
+    const pool = maxScore === 0
+      ? candidates
+      : scores.filter(s => s.score === maxScore).map(s => s.item);
+    return pool[Math.floor(Math.random() * pool.length)];
+  }
+
   function handleSelect() {
     if (state.filteredItems.length === 0) {
       const placeholder = elements.resultSection.querySelector('.result-placeholder');
@@ -474,8 +522,7 @@
           availableItems = state.filteredItems;
         }
 
-        const randomIndex = Math.floor(Math.random() * availableItems.length);
-        state.currentResult = availableItems[randomIndex];
+        state.currentResult = pickRelatedItem(availableItems, state.lastResult);
         state.lastResult = state.currentResult;
 
         renderResult();
@@ -507,6 +554,71 @@
       .join('');
 
     elements.resultSection.classList.add('show-result');
+    closeMoreRecs();
+  }
+
+  function getRelatedItems(count) {
+    const ref = state.currentResult;
+    if (!ref || !state.ingredientsData) return [];
+    const scored = state.ingredientsData.items
+      .filter(item => (item.id || item.name) !== (ref.id || ref.name))
+      .map(item => ({
+        item,
+        score: getRelatedScore(item, ref),
+      }))
+      .sort((a, b) => b.score - a.score);
+    const top = scored.filter(s => s.score > 0);
+    const pool = top.length >= count ? top : scored;
+    const result = [];
+    const used = new Set();
+    while (result.length < count && result.length < pool.length) {
+      const pick = pool[Math.floor(Math.random() * pool.length)];
+      const key = pick.item.id || pick.item.name;
+      if (!used.has(key)) {
+        used.add(key);
+        result.push(pick.item);
+      }
+    }
+    return result;
+  }
+
+  function showMoreRecs() {
+    if (!state.currentResult) return;
+    moreRecsItems = getRelatedItems(4);
+    renderMoreRecs();
+    elements.moreRecPanel.style.display = 'block';
+    elements.resultSlider.classList.add('show-more');
+  }
+
+  function refreshMoreRecs() {
+    moreRecsItems = getRelatedItems(4);
+    renderMoreRecs();
+  }
+
+  function closeMoreRecs() {
+    elements.resultSlider.classList.remove('show-more');
+    elements.moreRecPanel.style.display = 'none';
+  }
+
+  function renderMoreRecs() {
+    const items = elements.moreRecGrid.querySelectorAll('.more-rec-item');
+    items.forEach((el, i) => {
+      const item = moreRecsItems[i];
+      if (item) {
+        el.querySelector('.more-rec-name').textContent = item.name;
+        const tagsContainer = el.querySelector('.more-rec-tags');
+        if (tagsContainer) {
+          const tagNames = getTagNames(item.categories);
+          tagsContainer.innerHTML = tagNames
+            .map(name => `<span class="result-tag">${name}</span>`)
+            .join('');
+        }
+        el.classList.remove('expanded');
+        el.style.display = '';
+      } else {
+        el.style.display = 'none';
+      }
+    });
   }
 
   function getTagNames(categoryIds) {
@@ -608,6 +720,7 @@
     elements.resultName.textContent = '';
     elements.resultTags.innerHTML = '';
     elements.resultSection.classList.remove('show-result');
+    closeMoreRecs();
 
     updateFilteredItems();
     updateStats();
@@ -790,6 +903,56 @@
   document.addEventListener('DOMContentLoaded', () => {
     cacheElements();
     init();
+    initSwipe();
   });
+
+  function initSwipe() {
+    const slider = elements.resultSlider;
+    let startX = 0;
+    let isDragging = false;
+
+    slider.addEventListener('touchstart', (e) => {
+      if (elements.moreRecPanel.style.display === 'none') return;
+      startX = e.touches[0].clientX;
+      isDragging = true;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const diff = e.changedTouches[0].clientX - startX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0 && elements.resultSlider.classList.contains('show-more')) {
+          closeMoreRecs();
+        } else if (diff < 0 && !elements.resultSlider.classList.contains('show-more')) {
+          showMoreRecs();
+        }
+      }
+    }, { passive: true });
+
+    // Mouse drag for desktop
+    slider.addEventListener('mousedown', (e) => {
+      if (elements.moreRecPanel.style.display === 'none') return;
+      startX = e.clientX;
+      isDragging = true;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+    });
+
+    document.addEventListener('mouseup', (e) => {
+      if (!isDragging) return;
+      isDragging = false;
+      const diff = e.clientX - startX;
+      if (Math.abs(diff) > 50) {
+        if (diff > 0 && elements.resultSlider.classList.contains('show-more')) {
+          closeMoreRecs();
+        } else if (diff < 0 && !elements.resultSlider.classList.contains('show-more')) {
+          showMoreRecs();
+        }
+      }
+    });
+  }
 
 })();

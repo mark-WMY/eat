@@ -38,14 +38,41 @@
         </div>
       </div>
 
-      <!-- 结果区域 - 移至搜索框下方 -->
+      <!-- 结果区域 -->
       <section class="result-section-inline" id="result-section">
-        <p class="result-placeholder">点击搜索或推荐按钮开始</p>
-        <div class="result-card" id="result-card" style="display:none;">
-          <p class="result-label">本次推荐</p>
-          <h2 class="result-name" id="result-name"></h2>
-          <div class="result-tags" id="result-tags"></div>
+        <div class="result-slider" id="result-slider">
+          <!-- 本次推荐 -->
+          <div class="result-slide" id="result-slide-main">
+            <p class="result-placeholder">点击搜索或推荐按钮开始</p>
+            <div class="result-card" id="result-card" style="display:none;">
+              <div class="result-card-header">
+                <span class="result-label">本次推荐</span>
+                <button class="more-rec-btn" id="more-rec-btn">大家还喜欢 ➡</button>
+              </div>
+              <h2 class="result-name" id="result-name"></h2>
+              <div class="result-tags" id="result-tags"></div>
+            </div>
+          </div>
+          <!-- 更多推荐 -->
+          <div class="result-slide" id="result-slide-more">
+            <div class="more-rec-panel" id="more-rec-panel" style="display:none;">
+              <div class="more-rec-header">
+                <span class="result-label">更多推荐</span>
+                <div class="more-rec-actions">
+                  <button class="more-rec-refresh" id="more-rec-refresh" title="换一批">🔄</button>
+                  <button class="more-rec-close" id="more-rec-close" title="关闭">✕</button>
+                </div>
+              </div>
+              <div class="more-rec-grid" id="more-rec-grid">
+                <div class="more-rec-item" data-index="0"><span class="more-rec-name"></span><div class="more-rec-tags"></div></div>
+                <div class="more-rec-item" data-index="1"><span class="more-rec-name"></span><div class="more-rec-tags"></div></div>
+                <div class="more-rec-item" data-index="2"><span class="more-rec-name"></span><div class="more-rec-tags"></div></div>
+                <div class="more-rec-item" data-index="3"><span class="more-rec-name"></span><div class="more-rec-tags"></div></div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="result-blur-overlay" id="result-blur-overlay"></div>
       </section>
 
       <!-- 操作按钮 - 移至搜索框下方 -->

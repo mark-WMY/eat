@@ -24,6 +24,7 @@
         <div class="search-input-wrapper">
           <input type="text" id="search-input" placeholder="搜索菜品...">
           <button id="search-clear" class="search-clear-btn" style="display:none;">×</button>
+          <div class="search-dropdown" id="search-dropdown"></div>
         </div>
         <button id="search-btn" class="search-btn">🔍 搜索</button>
         <div class="common-toggle active" id="toggle-common" title="切换常见/全部模式">
@@ -84,6 +85,10 @@
       <div class="filter-group">
         <div class="filter-label">不包含以下食材(可多选)</div>
         <div class="filter-tags" id="filter-allergens"></div>
+        <div class="allergen-tooltip" id="allergen-tooltip">
+          <span class="tooltip-emoji">💡</span>可以选中特定的选项，然后保存网址，这样，下次打开的时候，就自动选中选项咯！
+          <span class="tooltip-close" id="tooltip-close">×</span>
+        </div>
       </div>
     </section>
 
@@ -98,6 +103,7 @@
     <div class="catalog-content">
       <div class="catalog-header">
         <h2>食物大全</h2>
+        <input type="text" id="catalog-search" class="catalog-search-input" placeholder="搜索过滤...">
         <button class="catalog-close" id="catalog-close">&times;</button>
       </div>
       <div class="catalog-body">

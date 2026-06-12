@@ -134,6 +134,43 @@ body {
   color: #FFF;
 }
 
+/* 搜索下拉预览 */
+.search-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 0 0 var(--radius-sm) var(--radius-sm);
+  max-height: 360px;
+  overflow-y: auto;
+  z-index: 200;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.search-dropdown.show {
+  display: block;
+}
+
+.search-dropdown-item {
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.12s;
+}
+
+.search-dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.search-dropdown-item:hover {
+  background: var(--bg-color);
+  color: var(--primary-color);
+}
+
 /* 常见/全部切换开关 */
 .common-toggle {
   display: flex;
@@ -194,32 +231,27 @@ body {
   left: 18px;
 }
 
-/* 隐藏的筛选标签 */
-.filter-tag.hidden-tag {
-  display: none;
-}
-
-.filter-tag.hidden-tag.show {
-  display: inline-flex;
-}
-
-/* 查看全部按钮 */
-.show-all-btn {
-  padding: 8px 16px;
-  background: transparent;
+/* 展开/折叠按钮 */
+.filter-expand-btn {
+  margin-top: 8px;
+  padding: 6px 14px;
+  background: var(--bg-color);
   color: var(--primary-color);
-  border: 2px dashed var(--primary-color);
+  border: 2px solid var(--border-color);
   border-radius: 20px;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease;
   user-select: none;
+  transition: all 0.2s;
 }
 
-.show-all-btn:hover {
-  background: rgba(255, 107, 53, 0.08);
-  border-style: solid;
+.filter-expand-btn:hover {
+  border-color: var(--primary-color);
+  background: #FFF;
 }
+
+
 
 .filter-group {
   margin-bottom: 20px;
@@ -251,6 +283,46 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+/* 展开/折叠按钮 - 行内"..."样式，与 filter-tag 一致 */
+.filter-expand-btn {
+  padding: 8px 14px;
+  background: var(--bg-color);
+  color: var(--primary-color);
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+  line-height: inherit;
+}
+
+.filter-expand-btn:hover {
+  border-color: var(--primary-color);
+  background: #FFF;
+}
+
+/* 标题栏"查看全部/折叠起来"按钮 */
+.filter-expand-label-btn {
+  margin-left: auto;
+  padding: 4px 12px;
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px dashed var(--primary-color);
+  border-radius: 16px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.filter-expand-label-btn:hover {
+  background: rgba(255, 107, 53, 0.08);
+  border-style: solid;
 }
 
 .filter-tag {
@@ -451,6 +523,11 @@ body {
     font-size: 0.8rem;
   }
 
+  .filter-expand-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
   .btn {
     padding: 12px 24px;
     font-size: 0.9rem;
@@ -502,12 +579,30 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .catalog-header h2 {
   font-size: 1.5rem;
   color: var(--accent-color);
   margin: 0;
+}
+
+.catalog-search-input {
+  flex: 1;
+  min-width: 120px;
+  max-width: 240px;
+  padding: 8px 12px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.catalog-search-input:focus {
+  border-color: var(--primary-color);
 }
 
 .catalog-close {
@@ -642,4 +737,53 @@ body {
   .action-section-inline .btn {
     width: 100%;
   }
+}
+
+/* ========== Tooltip 提示 ========== */
+.allergen-tooltip {
+  position: relative;
+  display: inline-block;
+  background: #4A3728;
+  color: #FFF5E6;
+  font-size: 0.82rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  margin-top: 8px;
+  max-width: 360px;
+  line-height: 1.5;
+  box-shadow: 0 4px 14px rgba(74, 55, 40, 0.25);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.allergen-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.allergen-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 24px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #4A3728;
+}
+
+.allergen-tooltip .tooltip-emoji {
+  margin-right: 4px;
+}
+
+.allergen-tooltip .tooltip-close {
+  position: absolute;
+  top: 2px;
+  right: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #C5A880;
+  padding: 2px 4px;
+  line-height: 1;
 }

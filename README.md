@@ -19,9 +19,8 @@
 
 ```
 eatWhat/
-├── index.html                          # Web版主页面
+├── index.html                          # 主页面
 ├── README.md                           # 项目说明文档
-├── 国内外在线部署网站教程.md           # 综合部署指南
 │
 ├── css/
 │   └── style.css                       # 样式文件
@@ -35,18 +34,8 @@ eatWhat/
 │   ├── logo.png                        # Logo图片
 │   └── chicken.ico                     # 网站图标
 │
-├── miniprogram/                        # 微信小程序版本
-│   ├── app.json
-│   ├── app.js
-│   ├── app.wxss
-│   ├── sitemap.json
-│   ├── pages/
-│   │   └── index/
-│   │       ├── index.js
-│   │       ├── index.wxml
-│   │       └── index.wxss
-│   └── data/
-│       └── ingredients.json            # 食物数据（小程序版）
+├── scripts/
+│   └── ingredient_tools.py             # 数据管理工具
 │
 ├── _redirects                          # Cloudflare路由配置
 └── wrangler.toml                       # Cloudflare项目配置
@@ -71,7 +60,6 @@ eatWhat/
 ## 🛠️ 技术栈
 
 - **前端**：HTML5 + CSS3 + Vanilla JavaScript（无框架依赖）
-- **小程序**：微信小程序原生开发
 - **部署**：纯静态网站托管，无需后端服务器
 - **数据存储**：JSON格式，完全本地化
 

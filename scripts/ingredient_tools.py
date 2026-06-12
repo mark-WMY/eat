@@ -21,8 +21,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DATA_FILES = [
     os.path.join(BASE_DIR, "js", "ingredients.json"),
-    os.path.join(BASE_DIR, "js", "ingredients_backup.json"),
-    os.path.join(BASE_DIR, "miniprogram", "data", "ingredients.json"),
 ]
 
 # ---------------------------------------------------------------------------

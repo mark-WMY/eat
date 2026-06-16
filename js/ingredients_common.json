@@ -44682,6 +44682,609 @@
                 "health": [],
                 "allergens": []
             }
+        },
+        {
+            "id": "item_03300",
+            "name": "盐煎肉",
+            "categories": [
+                "cuisine_chuan",
+                "meal_lunch",
+                "meal_dinner",
+                "food_pork",
+                "dish_main",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03301",
+            "name": "火爆腰花",
+            "categories": [
+                "cuisine_chuan",
+                "meal_lunch",
+                "meal_dinner",
+                "food_meat",
+                "dish_main",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03302",
+            "name": "冷锅鱼",
+            "categories": [
+                "cuisine_chuan",
+                "cuisine_yu",
+                "meal_lunch",
+                "meal_dinner",
+                "food_seafood",
+                "dish_main",
+                "allergen_shellfish",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": [
+                    "seafood"
+                ]
+            }
+        },
+        {
+            "id": "item_03303",
+            "name": "番茄鱼",
+            "categories": [
+                "cuisine_chuan",
+                "meal_lunch",
+                "meal_dinner",
+                "food_seafood",
+                "dish_main",
+                "allergen_fish"
+            ],
+            "attributes": {
+                "health": [
+                    "sour"
+                ],
+                "allergens": [
+                    "fish"
+                ]
+            }
+        },
+        {
+            "id": "item_03304",
+            "name": "啫啫煲",
+            "categories": [
+                "cuisine_yue",
+                "meal_lunch",
+                "meal_dinner",
+                "food_meat",
+                "food_stew",
+                "dish_main"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03305",
+            "name": "砂锅粥",
+            "categories": [
+                "cuisine_yue",
+                "meal_breakfast",
+                "meal_lunch",
+                "meal_dinner",
+                "meal_midnight",
+                "food_congee",
+                "dish_staple"
+            ],
+            "attributes": {
+                "health": [
+                    "light"
+                ],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03307",
+            "name": "炒花蛤",
+            "categories": [
+                "cuisine_yue",
+                "meal_lunch",
+                "meal_dinner",
+                "meal_midnight",
+                "food_seafood",
+                "dish_main",
+                "allergen_shellfish",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": [
+                    "seafood"
+                ]
+            }
+        },
+        {
+            "id": "item_03308",
+            "name": "蟹粉豆腐",
+            "categories": [
+                "cuisine_su",
+                "cuisine_shanghai",
+                "meal_lunch",
+                "meal_dinner",
+                "food_seafood",
+                "dish_main",
+                "allergen_shellfish",
+                "allergen_soy"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "seafood",
+                    "soy"
+                ]
+            }
+        },
+        {
+            "id": "item_03309",
+            "name": "小龙虾",
+            "categories": [
+                "cuisine_chuan",
+                "cuisine_hubei",
+                "meal_lunch",
+                "meal_dinner",
+                "meal_midnight",
+                "food_seafood",
+                "dish_main",
+                "allergen_shellfish",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": [
+                    "seafood"
+                ]
+            }
+        },
+        {
+            "id": "item_03310",
+            "name": "十三香小龙虾",
+            "categories": [
+                "cuisine_chuan",
+                "meal_lunch",
+                "meal_dinner",
+                "meal_midnight",
+                "food_seafood",
+                "dish_main",
+                "allergen_shellfish",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": [
+                    "seafood"
+                ]
+            }
+        },
+        {
+            "id": "item_03311",
+            "name": "蒜蓉小龙虾",
+            "categories": [
+                "cuisine_chuan",
+                "meal_lunch",
+                "meal_dinner",
+                "meal_midnight",
+                "food_seafood",
+                "dish_main",
+                "health_high_protein",
+                "allergen_shellfish",
+                "allergen_garlic"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "seafood"
+                ]
+            }
+        },
+        {
+            "id": "item_03312",
+            "name": "皮皮虾",
+            "categories": [
+                "cuisine_yue",
+                "cuisine_lu",
+                "meal_lunch",
+                "meal_dinner",
+                "meal_midnight",
+                "food_seafood",
+                "dish_main",
+                "health_high_protein",
+                "allergen_shellfish"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "seafood"
+                ]
+            }
+        },
+        {
+            "id": "item_03313",
+            "name": "清蒸桂鱼",
+            "categories": [
+                "cuisine_yue",
+                "cuisine_su",
+                "meal_lunch",
+                "meal_dinner",
+                "food_seafood",
+                "dish_main",
+                "health_high_protein",
+                "health_low_fat",
+                "health_light",
+                "allergen_fish"
+            ],
+            "attributes": {
+                "health": [
+                    "light"
+                ],
+                "allergens": [
+                    "fish"
+                ]
+            }
+        },
+        {
+            "id": "item_03314",
+            "name": "黄焖鸡",
+            "categories": [
+                "cuisine_lu",
+                "meal_lunch",
+                "meal_dinner",
+                "food_poultry",
+                "dish_main",
+                "health_high_protein"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03315",
+            "name": "鸡公煲",
+            "categories": [
+                "cuisine_chongqing",
+                "meal_lunch",
+                "meal_dinner",
+                "food_poultry",
+                "dish_main",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03316",
+            "name": "烧鸡",
+            "categories": [
+                "cuisine_lu",
+                "cuisine_dongbei",
+                "meal_lunch",
+                "meal_dinner",
+                "food_poultry",
+                "dish_main",
+                "health_high_protein"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03317",
+            "name": "扣肉",
+            "categories": [
+                "cuisine_xiang",
+                "cuisine_yue",
+                "meal_lunch",
+                "meal_dinner",
+                "food_pork",
+                "dish_main",
+                "health_high_protein"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03318",
+            "name": "菜包子",
+            "categories": [
+                "cuisine_other",
+                "meal_breakfast",
+                "meal_lunch",
+                "food_bun",
+                "food_vegetarian",
+                "dish_staple",
+                "allergen_gluten"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "gluten"
+                ]
+            }
+        },
+        {
+            "id": "item_03319",
+            "name": "汤圆",
+            "categories": [
+                "cuisine_other",
+                "meal_breakfast",
+                "meal_afternoon_tea",
+                "food_dessert",
+                "dish_dessert",
+                "allergen_gluten"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "gluten"
+                ]
+            }
+        },
+        {
+            "id": "item_03320",
+            "name": "毛豆",
+            "categories": [
+                "cuisine_other",
+                "meal_lunch",
+                "meal_dinner",
+                "meal_midnight",
+                "food_vegetarian",
+                "dish_appetizer",
+                "health_high_protein",
+                "health_high_fiber",
+                "allergen_soy"
+            ],
+            "attributes": {
+                "health": [
+                    "light"
+                ],
+                "allergens": [
+                    "soy"
+                ]
+            }
+        },
+        {
+            "id": "item_03321",
+            "name": "冰沙",
+            "categories": [
+                "cuisine_other",
+                "meal_afternoon_tea",
+                "food_fruit_tea",
+                "dish_beverage"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": []
+            }
+        },
+        {
+            "id": "item_03322",
+            "name": "椰奶",
+            "categories": [
+                "cuisine_other",
+                "meal_breakfast",
+                "meal_afternoon_tea",
+                "food_fruit_tea",
+                "dish_beverage",
+                "allergen_tree_nut"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "tree nut"
+                ]
+            }
+        },
+        {
+            "id": "item_03323",
+            "name": "炸猪排饭",
+            "categories": [
+                "cuisine_japanese",
+                "meal_lunch",
+                "meal_dinner",
+                "food_pork",
+                "food_rice",
+                "dish_main",
+                "allergen_gluten",
+                "allergen_egg"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "gluten",
+                    "egg"
+                ]
+            }
+        },
+        {
+            "id": "item_03324",
+            "name": "焗饭",
+            "categories": [
+                "cuisine_western",
+                "meal_lunch",
+                "meal_dinner",
+                "food_rice",
+                "dish_main",
+                "allergen_dairy"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "dairy"
+                ]
+            }
+        },
+        {
+            "id": "item_03325",
+            "name": "海鲜焗饭",
+            "categories": [
+                "cuisine_western",
+                "meal_lunch",
+                "meal_dinner",
+                "food_seafood",
+                "food_rice",
+                "dish_main",
+                "allergen_shellfish",
+                "allergen_dairy"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "seafood",
+                    "dairy"
+                ]
+            }
+        },
+        {
+            "id": "item_03326",
+            "name": "班戟",
+            "categories": [
+                "cuisine_western",
+                "meal_afternoon_tea",
+                "food_dessert",
+                "dish_dessert",
+                "allergen_dairy",
+                "allergen_egg",
+                "allergen_gluten"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "dairy",
+                    "egg",
+                    "gluten"
+                ]
+            }
+        },
+        {
+            "id": "item_03327",
+            "name": "贝果",
+            "categories": [
+                "cuisine_western",
+                "meal_breakfast",
+                "meal_lunch",
+                "food_wholegrain",
+                "dish_staple",
+                "allergen_gluten"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "gluten"
+                ]
+            }
+        },
+        {
+            "id": "item_03328",
+            "name": "绿咖喱",
+            "categories": [
+                "cuisine_thai",
+                "meal_lunch",
+                "meal_dinner",
+                "food_meat",
+                "dish_main",
+                "allergen_chili",
+                "allergen_dairy"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": [
+                    "dairy"
+                ]
+            }
+        },
+        {
+            "id": "item_03329",
+            "name": "红咖喱",
+            "categories": [
+                "cuisine_thai",
+                "meal_lunch",
+                "meal_dinner",
+                "food_meat",
+                "dish_main",
+                "allergen_chili",
+                "allergen_dairy"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": [
+                    "dairy"
+                ]
+            }
+        },
+        {
+            "id": "item_03330",
+            "name": "嫩豆腐汤",
+            "categories": [
+                "cuisine_korean",
+                "meal_lunch",
+                "meal_dinner",
+                "food_soup",
+                "food_vegetarian",
+                "dish_soup",
+                "allergen_soy",
+                "allergen_chili"
+            ],
+            "attributes": {
+                "health": [
+                    "spicy"
+                ],
+                "allergens": [
+                    "soy"
+                ]
+            }
+        },
+        {
+            "id": "item_03331",
+            "name": "雪花冰",
+            "categories": [
+                "cuisine_korean",
+                "meal_afternoon_tea",
+                "food_dessert",
+                "dish_dessert",
+                "allergen_dairy"
+            ],
+            "attributes": {
+                "health": [],
+                "allergens": [
+                    "dairy"
+                ]
+            }
         }
     ]
 }

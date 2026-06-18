@@ -24,4 +24,5 @@ Agent 在执行相关任务时，必须同时加载以下文件：
 |------|------|
 | `AGENTS.md`（本文件） | 全局规则中心，条目添加规则 |
 | `.trae/skills/food-db-cleaner/SKILL.md` | 条目删除/移动规则及执行流程 |
-| `.workbuddy/memory/2026-06-15.md` | 历史操作记录，供决策参考 |
+| `.workbuddy/memory/2026-06-15.md` | 历史操作记录（早期清理任务），供决策参考 |
+| `.workbuddy/memory/2026-06-18.md` | 历史操作记录（批量添加任务），供决策参考 |

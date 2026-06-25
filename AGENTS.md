@@ -16,6 +16,41 @@
 
 参见 `.trae/skills/food-db-cleaner/SKILL.md`。
 
+### 数据库维护完整流程
+
+当用户提出"对食材数据进行系统性更新/维护"、"添加/清理食材条目"等5项任务（ADD、SYNC、REVIEW、CONDITIONAL DELETE、DELETE FICTIONAL）时，必须加载 `.trae/skills/food-db-maintenance/SKILL.md` 并按标准流程执行。
+
+#### 五项任务定义
+
+| 任务 | 操作 | 范围 | 依据 |
+|------|------|------|------|
+| 任务1 ADD | 添加常见菜品到 common | common + full | 真实存在 + ≥3省覆盖 |
+| 任务2 SYNC | 同步 common 到 full | common ⊆ full | common 是 full 的子集 |
+| 任务3 REVIEW | 审查 common，移除不常见（MOVE到full） | common → full | 仅保留全国常见（≥3省） |
+| 任务4 CONDITIONAL DELETE | 仅虚构条目从full删除，真实条目只从common移 | full + common | 现实中不存在才删 |
+| 任务5 DELETE FICTIONAL | 删除 full 中虚构条目 | full (+ common 同步) | 现实中不存在 |
+
+#### DELETE 判定规则
+
+从 full 删除的条目（必须同时满足）:
+1. 现实中确实不存在（AI生成、虚构、错别字）
+2. 或不是具体菜品（品类标签、水状态、通用描述）
+
+以下情况不删除，仅从 common 移至 full:
+- 真实存在但地域性强（MOVE）
+- 真实存在但为特定品牌（MOVE）
+- 真实存在但为场景形式（MOVE）
+
+#### MOVE 判定规则
+
+从 common 移至 full 的条目（符合任一即可）:
+1. 仅 1-2 省覆盖的地域性菜品
+2. 前缀/后缀冗余（基础菜名已存在）
+3. 具体品牌名（非通用品类）
+4. 场景形式（宴席、套餐等）
+
+详见 `food-db-maintenance/SKILL.md`。
+
 ## 功能独立性规则（核心架构约束）
 
 > **此规则是系统架构的核心约束，任何代码修改都不得违反。**
@@ -90,6 +125,7 @@ Agent 在执行相关任务时，必须同时加载以下文件：
 |------|------|
 | `AGENTS.md`（本文件） | 全局规则中心，条目添加规则、功能独立性规则、推荐范围切换规则 |
 | `.trae/skills/food-db-cleaner/SKILL.md` | 条目删除/移动规则及执行流程 |
+| `.trae/skills/food-db-maintenance/SKILL.md` | 数据库5项维护完整流程指南（ADD/SYNC/MOVE/DELETE） |
 | `.trae/skills/recommend-mode/SKILL.md` | 推荐范围三段式切换功能说明 |
 | `.trae/skills/feature-independence/SKILL.md` | 功能独立性规则说明（开始推荐/大家还喜欢/搜索/食物大全的行为约束） |
 | `.workbuddy/memory/2026-06-15.md` | 历史操作记录（早期清理任务），供决策参考 |

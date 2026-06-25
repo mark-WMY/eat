@@ -17,7 +17,20 @@
   <div class="container">
     <!-- 头部 -->
     <header class="header">
-      <h1>有什么好吃的?</h1>
+      <div class="header-main">
+        <h1 id="main-title">有什么好吃的?</h1>
+        <div class="recommend-toggle-wrapper">
+          <div class="recommend-toggle" id="recommend-toggle" role="tablist" aria-label="推荐范围切换">
+            <button class="recommend-toggle-btn active" data-mode="food" role="tab" aria-selected="true">好吃的</button>
+            <button class="recommend-toggle-btn" data-mode="all" role="tab" aria-selected="false">全部</button>
+            <button class="recommend-toggle-btn" data-mode="snack" role="tab" aria-selected="false">小吃零食甜点饮品</button>
+          </div>
+          <span class="recommend-info-icon" id="recommend-info-icon" title="查看推荐范围说明">ℹ</span>
+          <div class="recommend-tooltip" id="recommend-tooltip">
+            <div class="recommend-tooltip-content" id="recommend-tooltip-content"></div>
+          </div>
+        </div>
+      </div>
       <p>智能推荐一款美味佳肴</p>
     </header>
 

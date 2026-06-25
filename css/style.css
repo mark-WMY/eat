@@ -39,16 +39,150 @@ body {
   padding: 30px 0;
 }
 
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 .header h1 {
   font-size: 2.2rem;
   font-weight: 700;
   color: var(--primary-color);
   margin-bottom: 8px;
+  transition: opacity 0.3s ease;
+}
+
+.header h1.switching {
+  opacity: 0;
 }
 
 .header p {
   color: var(--text-light);
   font-size: 0.95rem;
+}
+
+/* 三段式推荐范围切换按钮 */
+.recommend-toggle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recommend-toggle {
+  display: inline-flex;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 22px;
+  padding: 3px;
+  gap: 2px;
+}
+
+.recommend-toggle-btn {
+  padding: 6px 14px;
+  border: none;
+  background: transparent;
+  border-radius: 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  outline: none;
+}
+
+.recommend-toggle-btn:hover {
+  color: var(--primary-color);
+}
+
+.recommend-toggle-btn.active {
+  background: var(--primary-color);
+  color: #FFF;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+}
+
+/* 推荐范围信息图标 */
+.recommend-info-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--border-color);
+  color: var(--text-light);
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.recommend-info-icon:hover {
+  background: var(--primary-color);
+  color: #FFF;
+}
+
+/* 推荐范围 tooltip */
+.recommend-tooltip {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: #4A3728;
+  color: #FFF5E6;
+  font-size: 0.8rem;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  max-width: 340px;
+  min-width: 260px;
+  line-height: 1.6;
+  box-shadow: 0 6px 20px rgba(74, 55, 40, 0.3);
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  z-index: 200;
+  text-align: left;
+}
+
+.recommend-tooltip.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.recommend-tooltip::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 20px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #4A3728;
+}
+
+.recommend-tooltip-content strong {
+  color: #FFB088;
+  font-weight: 600;
+}
+
+.recommend-tooltip-content .tooltip-current {
+  display: block;
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 245, 230, 0.2);
+}
+
+.recommend-tooltip-content .tooltip-other {
+  display: block;
+  color: #C5A880;
+  font-size: 0.75rem;
 }
 
 /* 筛选区域 */
@@ -800,6 +934,14 @@ body {
   .common-toggle { order: 3; padding: 6px 10px; }
   .action-section-inline { flex-direction: column; }
   .action-section-inline .btn { width: 100%; }
+
+  .header-main { flex-direction: column; gap: 10px; }
+  .header h1 { font-size: 1.6rem; margin-bottom: 0; }
+  .recommend-toggle { flex-wrap: wrap; justify-content: center; }
+  .recommend-toggle-btn { padding: 5px 10px; font-size: 0.72rem; }
+  .recommend-tooltip { right: auto; left: 50%; transform: translateX(-50%) translateY(-6px); max-width: 280px; }
+  .recommend-tooltip.show { transform: translateX(-50%) translateY(0); }
+  .recommend-tooltip::before { right: auto; left: 50%; transform: translateX(-50%); }
 }
 
 /* ===== 桌面端 ===== */

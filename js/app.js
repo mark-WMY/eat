@@ -24,8 +24,53 @@
     'cuisine_brazilian', 'cuisine_western', 'cuisine_middle_eastern', 'cuisine_african'
   ];
 
+  // 饮品/酒水类分类 ID（"好吃的"模式下需剔除）
+  const BEVERAGE_CATEGORY_IDS = new Set([
+    'food_alcohol', 'food_tea', 'food_coffee', 'food_fruit_tea',
+    'dish_beverage'
+  ]);
+
+  // 小吃/零食/甜点/饮品类分类 ID（"小吃零食甜点饮品"模式下仅展示这些）
+  const SNACK_CATEGORY_IDS = new Set([
+    'food_snack', 'food_dessert', 'food_alcohol', 'food_tea',
+    'food_coffee', 'food_fruit_tea',
+    'dish_snack', 'dish_dessert', 'dish_beverage'
+  ]);
+
+  // 推荐模式配置
+  const RECOMMEND_MODES = {
+    food: {
+      title: '有什么好吃的?',
+      label: '好吃的',
+      tooltip: '仅推荐食物条目，自动剔除酒水、饮品等非食物类项目',
+      tooltipOthers: [
+        '「全部」：推荐包含食物、酒水、饮品等所有内容',
+        '「小吃零食甜点饮品」：仅推荐小吃、零食、甜点和各类饮品'
+      ]
+    },
+    all: {
+      title: '有什么推荐的?',
+      label: '全部',
+      tooltip: '推荐全部内容类型，包含食物、酒水、饮品等所有常见类别',
+      tooltipOthers: [
+        '「好吃的」：仅推荐食物条目，自动剔除酒水、饮品',
+        '「小吃零食甜点饮品」：仅推荐小吃、零食、甜点和各类饮品'
+      ]
+    },
+    snack: {
+      title: '有什么解馋的?',
+      label: '小吃零食甜点饮品',
+      tooltip: '仅推荐非主食类内容，包括小吃、零食、甜点和各类饮品',
+      tooltipOthers: [
+        '「好吃的」：仅推荐食物条目，自动剔除酒水、饮品',
+        '「全部」：推荐包含食物、酒水、饮品等所有内容'
+      ]
+    }
+  };
+
   const state = {
     ingredientsData: null,
+    fullData: null,
     selectedFilters: {
       cuisine: [],
       mealType: null,
@@ -35,6 +80,7 @@
       allergens: []
     },
     showAllMode: false,
+    recommendMode: 'food',
     currentResult: null,
     lastResult: null,
     filteredItems: []
@@ -53,6 +99,7 @@
     renderFilters();
     const hasURLParams = loadFromURL();
     if (hasURLParams) applyLoadedFilters();
+    applyRecommendModeUI();
     updateFilteredItems();
     updateStats();
     handleSelect();
@@ -76,12 +123,11 @@
       const fullData = await response.json();
       if (fullData && fullData.items) {
         state.ingredientsData = fullData;
-        if (state.showAllMode) {
-          updateFilteredItems();
-          updateStats();
-          if (elements.catalogModal.classList.contains('show')) {
-            handleCatalog();
-          }
+        state.fullData = fullData;
+        updateFilteredItems();
+        updateStats();
+        if (elements.catalogModal.classList.contains('show')) {
+          handleCatalog();
         }
       }
     } catch (error) {
@@ -122,6 +168,11 @@
     elements.moreRecGrid = document.getElementById('more-rec-grid');
     elements.resultSlider = document.getElementById('result-slider');
     elements.resultBlurOverlay = document.getElementById('result-blur-overlay');
+    elements.mainTitle = document.getElementById('main-title');
+    elements.recommendToggle = document.getElementById('recommend-toggle');
+    elements.recommendInfoIcon = document.getElementById('recommend-info-icon');
+    elements.recommendTooltip = document.getElementById('recommend-tooltip');
+    elements.recommendTooltipContent = document.getElementById('recommend-tooltip-content');
   }
 
   function bindEvents() {
@@ -136,6 +187,27 @@
     });
 
     elements.toggleCommon.addEventListener('click', handleToggleCommon);
+
+    // 三段式推荐范围切换
+    elements.recommendToggle.addEventListener('click', (e) => {
+      const btn = e.target.closest('.recommend-toggle-btn');
+      if (!btn) return;
+      const mode = btn.dataset.mode;
+      if (mode === state.recommendMode) return;
+      handleRecommendModeChange(mode);
+    });
+
+    // 推荐范围 tooltip
+    elements.recommendInfoIcon.addEventListener('click', (e) => {
+      e.stopPropagation();
+      elements.recommendTooltip.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!elements.recommendTooltip.contains(e.target) && e.target !== elements.recommendInfoIcon) {
+        elements.recommendTooltip.classList.remove('show');
+      }
+    });
 
     elements.searchInput.addEventListener('input', (e) => {
       clearTimeout(searchTimeout);
@@ -234,9 +306,87 @@
   function handleToggleCommon() {
     state.showAllMode = !state.showAllMode;
     elements.toggleCommon.classList.toggle('active');
-    updateFilteredItems();
-    updateStats();
+    // 常见/全部仅影响"开始推荐"和"大家还喜欢"，不影响搜索、食物大全和统计
     updateURL();
+  }
+
+  function handleRecommendModeChange(mode) {
+    state.recommendMode = mode;
+
+    // 更新按钮选中状态
+    elements.recommendToggle.querySelectorAll('.recommend-toggle-btn').forEach(btn => {
+      const isActive = btn.dataset.mode === mode;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+
+    updateRecommendTitle(mode);
+    updateRecommendTooltip(mode);
+    updateURL();
+
+    // 切换模式后自动重新推荐一次
+    handleSelect();
+  }
+
+  function updateRecommendTitle(mode) {
+    const config = RECOMMEND_MODES[mode];
+    if (!config) return;
+    elements.mainTitle.classList.add('switching');
+    setTimeout(() => {
+      elements.mainTitle.textContent = config.title;
+      elements.mainTitle.classList.remove('switching');
+    }, 150);
+  }
+
+  function updateRecommendTooltip(mode) {
+    const config = RECOMMEND_MODES[mode];
+    if (!config) return;
+    const othersHtml = config.tooltipOthers
+      .map(t => `<span class="tooltip-other">${t}</span>`)
+      .join('');
+    elements.recommendTooltipContent.innerHTML =
+      `<span class="tooltip-current"><strong>当前：${config.label}</strong> — ${config.tooltip}</span>${othersHtml}`;
+  }
+
+  // 同步推荐模式相关的 UI 状态（按钮、标题、tooltip）
+  function applyRecommendModeUI() {
+    const mode = state.recommendMode;
+    elements.recommendToggle.querySelectorAll('.recommend-toggle-btn').forEach(btn => {
+      const isActive = btn.dataset.mode === mode;
+      btn.classList.toggle('active', isActive);
+      btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
+    const config = RECOMMEND_MODES[mode];
+    if (config) {
+      elements.mainTitle.textContent = config.title;
+    }
+    updateRecommendTooltip(mode);
+  }
+
+  // 根据推荐模式过滤条目（仅影响"开始推荐"和"大家还喜欢"，不影响搜索和食物大全）
+  function getRecommendationItems() {
+    let items = state.filteredItems;
+
+    // 应用常见/全部过滤（用户手动选择的筛选条件）
+    if (!state.showAllMode) {
+      items = items.filter(item =>
+        item.categories.some(c => COMMON_CUISINE_IDS.has(c))
+      );
+    }
+
+    // 应用推荐模式过滤
+    const mode = state.recommendMode;
+    if (mode === 'food') {
+      return items.filter(item =>
+        !item.categories.some(c => BEVERAGE_CATEGORY_IDS.has(c))
+      );
+    }
+    if (mode === 'snack') {
+      return items.filter(item =>
+        item.categories.some(c => SNACK_CATEGORY_IDS.has(c))
+      );
+    }
+    return items;
   }
 
   function renderFilters() {
@@ -401,7 +551,7 @@
   }
 
   function updateFilteredItems() {
-    const items = state.ingredientsData.items;
+    const items = state.fullData?.items || state.ingredientsData.items;
     const filters = state.selectedFilters;
 
     state.filteredItems = items.filter(item => {
@@ -409,11 +559,6 @@
         if (!item.name.toLowerCase().includes(currentSearchKeyword)) {
           return false;
         }
-      }
-
-      if (!state.showAllMode) {
-        const hasCommonCuisine = item.categories.some(c => COMMON_CUISINE_IDS.has(c));
-        if (!hasCommonCuisine) return false;
       }
 
       if (filters.cuisine.length > 0) {
@@ -477,7 +622,9 @@
   }
 
   function handleSelect() {
-    if (state.filteredItems.length === 0) {
+    const recommendItems = getRecommendationItems();
+
+    if (recommendItems.length === 0) {
       const placeholder = elements.resultSection.querySelector('.result-placeholder');
       const resultCard = document.getElementById('result-card');
       if (placeholder) placeholder.style.display = 'none';
@@ -501,8 +648,8 @@
     let count = 0;
     const maxCount = 20;
     const interval = setInterval(() => {
-      const randomItem = state.filteredItems[
-        Math.floor(Math.random() * state.filteredItems.length)
+      const randomItem = recommendItems[
+        Math.floor(Math.random() * recommendItems.length)
       ];
       elements.resultName.textContent = randomItem.name;
       elements.resultName.classList.add('rolling');
@@ -519,16 +666,10 @@
         clearInterval(interval);
         elements.resultName.classList.remove('rolling');
 
-        let availableItems = state.filteredItems.filter(
-          item => (item.id || item.name) !== (state.lastResult?.id || state.lastResult?.name)
-        );
-
-        if (availableItems.length === 0) {
-          availableItems = state.filteredItems;
-        }
-
-        state.currentResult = pickRelatedItem(availableItems, state.lastResult);
-        state.lastResult = state.currentResult;
+        // 纯随机选择，完全独立于历史推荐结果
+        state.currentResult = recommendItems[
+          Math.floor(Math.random() * recommendItems.length)
+        ];
 
         renderResult();
         elements.btnSelect.disabled = false;
@@ -565,7 +706,8 @@
   function getRelatedItems(count) {
     const ref = state.currentResult;
     if (!ref || !state.ingredientsData) return [];
-    const scored = state.ingredientsData.items
+    const recommendItems = getRecommendationItems();
+    const scored = recommendItems
       .filter(item => (item.id || item.name) !== (ref.id || ref.name))
       .map(item => ({
         item,
@@ -652,7 +794,8 @@
       return;
     }
     const kw = keyword.toLowerCase();
-    const allItems = state.ingredientsData.items;
+    // 搜索始终使用 full.json 全部条目，不受常见/全部筛选条件限制
+    const allItems = state.fullData?.items || state.ingredientsData.items;
     const matches = [];
     for (let i = 0; i < allItems.length && matches.length < 15; i++) {
       if (allItems[i].name.toLowerCase().includes(kw)) {
@@ -675,7 +818,9 @@
 
   function selectFromSearchDropdown(name) {
     hideSearchDropdown();
-    const item = state.ingredientsData.items.find(i => i.name === name);
+    // 搜索选择使用 full.json 全部条目
+    const allItems = state.fullData?.items || state.ingredientsData.items;
+    const item = allItems.find(i => i.name === name);
     if (!item) return;
 
     elements.searchInput.value = name;
@@ -733,7 +878,7 @@
   }
 
   function updateStats() {
-    const total = state.ingredientsData?.items?.length || 0;
+    const total = state.fullData?.items?.length || state.ingredientsData?.items?.length || 0;
     const filtered = state.filteredItems.length;
 
     elements.statsCount.textContent = filtered;
@@ -753,6 +898,7 @@
     if (f.healthTags.length > 0) params.set('health', f.healthTags.join(','));
     if (f.allergens.length > 0) params.set('allergen', f.allergens.join(','));
     if (state.showAllMode) params.set('all', '1');
+    if (state.recommendMode !== 'food') params.set('rec', state.recommendMode);
     if (currentSearchKeyword) params.set('q', currentSearchKeyword);
 
     return params;
@@ -812,6 +958,12 @@
       hasParams = true;
     }
 
+    const rec = params.get('rec');
+    if (rec && RECOMMEND_MODES[rec]) {
+      state.recommendMode = rec;
+      hasParams = true;
+    }
+
     const q = params.get('q');
     if (q) {
       currentSearchKeyword = q.toLowerCase();
@@ -844,6 +996,9 @@
     } else {
       elements.toggleCommon.classList.add('active');
     }
+
+    // Apply recommendation mode
+    applyRecommendModeUI();
 
     updateFilteredItems();
     updateStats();
@@ -885,7 +1040,9 @@
   function handleCatalog() {
     if (!state.ingredientsData) return;
 
-    const sortedItems = [...state.ingredientsData.items].sort((a, b) => {
+    // 食物大全始终使用 full.json 全部条目，不受任何筛选条件影响
+    const allItems = state.fullData?.items || state.ingredientsData.items;
+    const sortedItems = [...allItems].sort((a, b) => {
       return a.name.localeCompare(b.name, 'zh-CN');
     });
 

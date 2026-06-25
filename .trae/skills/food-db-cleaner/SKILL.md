@@ -59,8 +59,8 @@ references:
 
 ```
 js/
-  ingredients_common.json  # 常见食物（2500+条）
-  ingredients_full.json    # 全量食物（5600+条）
+  ingredients_common.json  # 常见食物（~5200条）
+  ingredients_full.json    # 全量食物（~7000条）
 ```
 
 ## 执行流程
@@ -70,4 +70,7 @@ js/
 3. 执行删除和移动
 4. 添加谐音属性
 5. 验证 JSON 有效性
-6. 清理临时脚本文件
+6. 清理临时脚本/工作文件（移入 `scripts/` 或删除）
+   - 将根目录工作脚本移入 `scripts/` 存档
+   - 删除已执行完毕的一次性添加/修复脚本
+   - 删除 `.bak` 备份文件、`__pycache__` 缓存、中间输出文件

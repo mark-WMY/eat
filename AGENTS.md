@@ -92,4 +92,5 @@ Agent 在执行相关任务时，必须同时加载以下文件：
 | `.trae/skills/food-db-cleaner/SKILL.md` | 条目删除/移动规则及执行流程 |
 | `.trae/skills/recommend-mode/SKILL.md` | 推荐范围三段式切换功能说明 |
 | `.trae/skills/feature-independence/SKILL.md` | 功能独立性规则说明（开始推荐/大家还喜欢/搜索/食物大全的行为约束） |
-| `.workbuddy/memory/2026-06-15.md` | 历史操作记录，供决策参考 |
+| `.workbuddy/memory/2026-06-15.md` | 历史操作记录（早期清理任务），供决策参考 |
+| `.workbuddy/memory/2026-06-18.md` | 历史操作记录（批量添加任务），供决策参考 |
